@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Linkedin } from 'lucide-react';
 import { Language, translations } from '@/lib/translations';
 import joelPhoto from '@/assets/team/joel.png';
 import valentinPhoto from '@/assets/team/valentin.png';
@@ -59,14 +60,22 @@ export const Team = ({ language }: TeamProps) => {
               variants={cardVariants}
               className="group text-center"
             >
-              <div className="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-2xl block"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                  <Linkedin className="w-10 h-10 text-background" />
+                </div>
                 <img
                   src={teamPhotos[index]}
                   alt={member.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </div>
+              </a>
               <h3 className="text-xl font-bold text-foreground mb-1">
                 {member.name}
               </h3>

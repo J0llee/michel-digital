@@ -59,10 +59,10 @@ export const translations = {
       fi: 'Olemme Joel, Valentin ja Walford – kolme nuorta, osaavaa opiskelijaa Mikkelistä.',
       en: 'We are Joel, Valentin, and Walford – three young, skilled students from Mikkeli.',
     },
-    members: [
-      { name: 'Joel Korte', role: { fi: 'Kehittäjä', en: 'Developer' } },
-      { name: 'Valentin Lehtola', role: { fi: 'Kehittäjä', en: 'Developer' } },
-      { name: 'Walford Geers', role: { fi: 'Kehittäjä', en: 'Developer' } },
+  members: [
+      { name: 'Joel Korte', role: { fi: 'Kehittäjä', en: 'Developer' }, linkedin: 'https://www.linkedin.com/in/joel-korte/' },
+      { name: 'Valentin Lehtola', role: { fi: 'Kehittäjä', en: 'Developer' }, linkedin: 'https://www.linkedin.com/in/valentin-lehtola/' },
+      { name: 'Walford Geers', role: { fi: 'Kehittäjä', en: 'Developer' }, linkedin: 'https://www.linkedin.com/in/walford-geers/' },
     ],
   },
   footer: {
