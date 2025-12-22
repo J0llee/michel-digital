@@ -1,13 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { Navbar } from '@/components/Navbar';
+import { Hero } from '@/components/Hero';
+import { Services } from '@/components/Services';
+import { References } from '@/components/References';
+import { Team } from '@/components/Team';
+import { Footer } from '@/components/Footer';
+import { Language } from '@/lib/translations';
 
 const Index = () => {
+  const [language, setLanguage] = useState<Language>('fi');
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen">
+      <Navbar language={language} onLanguageChange={setLanguage} />
+      <Hero language={language} />
+      <Services language={language} />
+      <References language={language} />
+      <Team language={language} />
+      <Footer language={language} />
+    </main>
   );
 };
 
