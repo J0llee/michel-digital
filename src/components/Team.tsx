@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
+import joelPhoto from '@/assets/team/joel.png';
+import valentinPhoto from '@/assets/team/valentin.png';
+import walfordPhoto from '@/assets/team/walford.png';
 
 interface TeamProps {
   language: Language;
@@ -8,11 +11,7 @@ interface TeamProps {
 export const Team = ({ language }: TeamProps) => {
   const t = translations.team;
 
-  const teamPhotos = [
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
-    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-  ];
+  const teamPhotos = [joelPhoto, valentinPhoto, walfordPhoto];
 
   const containerVariants = {
     hidden: { opacity: 0 },
