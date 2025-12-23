@@ -5,12 +5,13 @@ import joelPhoto from '@/assets/team/joel.png';
 import valentinPhoto from '@/assets/team/valentin.png';
 import walfordPhoto from '@/assets/team/walford.png';
 
-interface TeamProps {
+interface AboutPageProps {
   language: Language;
 }
 
-export const Team = ({ language }: TeamProps) => {
-  const t = translations.team;
+const AboutPage = ({ language }: AboutPageProps) => {
+  const t = translations.about;
+  const teamT = translations.team;
 
   const teamPhotos = [joelPhoto, valentinPhoto, walfordPhoto];
 
@@ -30,31 +31,42 @@ export const Team = ({ language }: TeamProps) => {
   };
 
   return (
-    <section id="team" className="py-24 bg-secondary/50">
+    <div className="pt-32 pb-24 min-h-screen">
       <div className="container px-6">
+        {/* Story Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-20 max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
             {t.title[language]}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            {t.intro[language]}
+          </h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            {t.story[language]}
           </p>
+        </motion.div>
+
+        {/* Team Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            {t.teamTitle[language]}
+          </h2>
         </motion.div>
 
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
           className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
         >
-          {t.members.map((member, index) => (
+          {teamT.members.map((member, index) => (
             <motion.div
               key={member.name}
               variants={cardVariants}
@@ -84,6 +96,8 @@ export const Team = ({ language }: TeamProps) => {
           ))}
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
+
+export default AboutPage;

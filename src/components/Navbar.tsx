@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Globe, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
@@ -10,16 +11,22 @@ interface NavbarProps {
 
 export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
   const t = translations.nav;
 
   const navLinks = [
-    { href: '#services', label: t.services[language] },
-    { href: '#references', label: t.references[language] },
-    { href: '#team', label: t.about[language] },
+    { href: '/', label: t.home[language] },
+    { href: '/services', label: t.services[language] },
+    { href: '/references', label: t.references[language] },
+    { href: '/about', label: t.about[language] },
   ];
 
   const toggleLanguage = () => {
     onLanguageChange(language === 'fi' ? 'en' : 'fi');
+  };
+
+  const isActive = (href: string) => {
+    return location.pathname === href;
   };
 
   return (
@@ -32,20 +39,24 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-xl font-bold text-foreground">
+          <Link to="/" className="text-xl font-bold text-foreground">
             Michel <span className="text-primary">Digital</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                to={link.href}
+                className={`font-medium transition-colors ${
+                  isActive(link.href)
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
 
             {/* Language Toggle */}
@@ -88,14 +99,18 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
             >
               <div className="flex flex-col gap-4">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
-                    href={link.href}
+                    to={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                    className={`font-medium py-2 transition-colors ${
+                      isActive(link.href)
+                        ? 'text-primary'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </motion.div>
