@@ -13,8 +13,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    --primary: 28 100% 63%;
+    --primary: 28 89% 63%;
     --primary-foreground: 0 0% 100%;
+    
+    /* Credibility section background */
+    --credibility: 28 100% 97%;
+    --credibility-foreground: 28 100% 35%;
 
     --secondary: 220 14% 96%;
     --secondary-foreground: 220 15% 15%;

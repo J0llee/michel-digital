@@ -2,32 +2,30 @@ import { Clock, Code } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 
-interface ReferencesProps {
+interface ReferencesPageProps {
   language: Language;
 }
 
-export const References = ({ language }: ReferencesProps) => {
+const ReferencesPage = ({ language }: ReferencesPageProps) => {
   const t = translations.references;
 
   return (
-    <section id="references" className="py-24 bg-background">
+    <section className="pt-32 pb-24 min-h-screen">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             {t.title[language]}
-          </h2>
+          </h1>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="max-w-2xl mx-auto"
         >
@@ -48,9 +46,9 @@ export const References = ({ language }: ReferencesProps) => {
               <span className="text-4xl">🚀</span>
             </motion.div>
 
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
               {t.comingSoon[language]}
-            </h3>
+            </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               {t.description[language]}
             </p>
@@ -60,3 +58,5 @@ export const References = ({ language }: ReferencesProps) => {
     </section>
   );
 };
+
+export default ReferencesPage;

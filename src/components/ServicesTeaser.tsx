@@ -1,12 +1,13 @@
-import { Check, Sparkles, Wrench } from 'lucide-react';
+import { Check, Sparkles, Wrench, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Language, translations } from '@/lib/translations';
 
-interface ServicesProps {
+interface ServicesTeaserProps {
   language: Language;
 }
 
-export const Services = ({ language }: ServicesProps) => {
+export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
   const t = translations.services;
 
   const containerVariants = {
@@ -25,7 +26,7 @@ export const Services = ({ language }: ServicesProps) => {
   };
 
   return (
-    <section id="services" className="py-24 bg-secondary/50">
+    <section className="py-24 bg-secondary/50">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +65,7 @@ export const Services = ({ language }: ServicesProps) => {
               {t.website.description[language]}
             </p>
             <ul className="space-y-3">
-              {t.website.features[language].map((feature, index) => (
+              {t.website.features[language].slice(0, 3).map((feature, index) => (
                 <li key={index} className="flex items-center gap-3 text-foreground">
                   <Check className="w-5 h-5 text-primary flex-shrink-0" />
                   <span>{feature}</span>
@@ -92,7 +93,7 @@ export const Services = ({ language }: ServicesProps) => {
               {t.maintenance.description[language]}
             </p>
             <ul className="space-y-3">
-              {t.maintenance.features[language].map((feature, index) => (
+              {t.maintenance.features[language].slice(0, 3).map((feature, index) => (
                 <li key={index} className="flex items-center gap-3 text-foreground">
                   <Check className="w-5 h-5 text-primary flex-shrink-0" />
                   <span>{feature}</span>
@@ -100,6 +101,23 @@ export const Services = ({ language }: ServicesProps) => {
               ))}
             </ul>
           </motion.div>
+        </motion.div>
+
+        {/* Read More Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg hover:bg-primary/90 transition-all hover:gap-4 shadow-lg shadow-primary/25"
+          >
+            {t.readMore[language]}
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </motion.div>
       </div>
     </section>
