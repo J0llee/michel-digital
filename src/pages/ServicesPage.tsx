@@ -1,5 +1,6 @@
-import { Check, Sparkles, Wrench, Clock, TrendingUp } from 'lucide-react';
+import { Check, Sparkles, Wrench, Clock, TrendingUp, Mail, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Language, translations } from '@/lib/translations';
 
 interface ServicesPageProps {
@@ -130,6 +131,41 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
               </ul>
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="max-w-3xl mx-auto mt-16 bg-accent/30 rounded-2xl p-8 md:p-12 text-center border border-border"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            {t.cta.title[language]}
+          </h2>
+          <p className="text-muted-foreground text-lg mb-8">
+            {t.cta.description[language]}
+          </p>
+          
+          <a
+            href="mailto:hello@micheldigital.fi"
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors mb-6"
+          >
+            <Mail className="w-5 h-5" />
+            hello@micheldigital.fi
+          </a>
+          
+          <p className="text-muted-foreground mb-4">
+            {t.cta.teamLabel[language]}
+          </p>
+          
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+          >
+            {t.cta.teamLink[language]}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </motion.div>
       </div>
     </section>
