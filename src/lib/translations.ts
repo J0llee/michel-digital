@@ -64,6 +64,19 @@ export const translations = {
         en: ['Content management', 'Analytics', 'Security updates', 'Ongoing support'],
       },
     },
+    cta: {
+      title: { fi: 'Valmis aloittamaan?', en: 'Ready to get started?' },
+      description: {
+        fi: 'Ota yhteyttä, niin keskustellaan miten voimme auttaa yritystäsi kasvamaan verkossa.',
+        en: "Get in touch and let's discuss how we can help your business grow online.",
+      },
+      emailLabel: { fi: 'Lähetä meille sähköpostia', en: 'Send us an email' },
+      teamLabel: {
+        fi: 'Tai ota suoraan yhteyttä tiimimme jäseneen',
+        en: 'Or reach out directly to a team member',
+      },
+      teamLink: { fi: 'Tutustu tiimiin', en: 'Meet the team' },
+    },
   },
   references: {
     title: { fi: 'Referenssit', en: 'References' },
