@@ -13,8 +13,8 @@ export const translations = {
       en: 'Digital Excellence from Mikkeli – Modern websites with a local touch.',
     },
     subtext: {
-      fi: 'Tämä verkkosivu on 100% meidän itsemme suunnittelema ja toteuttama käyttäen uusimpia työkaluja ja teknologioita. Rakennamme parhaillaan portfoliotamme – tule mukaan kasvutarinaan.',
-      en: "This website was 100% designed and built by us using the latest tools and technology. We are currently building our portfolio – join our growth story.",
+      fi: 'Tämä verkkosivu on 10% meidän itsemme suunnittelema ja toteuttama käyttäen uusimpia työkaluja ja teknologioita. Rakennamme parhaillaan portfoliotamme – tule mukaan kasvutarinaan.',
+      en: "This website was 10% designed and built by us using the latest tools and technology. We are currently building our portfolio – join our growth story.",
     },
     cta: { fi: 'Ota yhteyttä', en: 'Contact Us' },
   },
