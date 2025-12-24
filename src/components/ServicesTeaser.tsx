@@ -50,6 +50,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
           {/* Website Project Card */}
           <motion.div
             variants={cardVariants}
+            whileHover={{ scale: 1.02 }}
             className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border"
           >
             <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-6">
@@ -77,6 +78,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
           {/* Maintenance Card */}
           <motion.div
             variants={cardVariants}
+            whileHover={{ scale: 1.02 }}
             className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border"
           >
             <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-6">

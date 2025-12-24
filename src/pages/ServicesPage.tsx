@@ -48,7 +48,8 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
           {/* Website Project Card */}
           <motion.div
             variants={cardVariants}
-            className="bg-card rounded-2xl p-8 shadow-card border border-border"
+            whileHover={{ scale: 1.02, boxShadow: '0 20px 40px -15px rgba(0,0,0,0.15)' }}
+            className="bg-card rounded-2xl p-8 shadow-card border border-border transition-all duration-300"
           >
             <div className="flex items-start justify-between mb-6">
               <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center">
@@ -91,7 +92,8 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
           {/* Maintenance Card */}
           <motion.div
             variants={cardVariants}
-            className="bg-card rounded-2xl p-8 shadow-card border border-border"
+            whileHover={{ scale: 1.02, boxShadow: '0 20px 40px -15px rgba(0,0,0,0.15)' }}
+            className="bg-card rounded-2xl p-8 shadow-card border border-border transition-all duration-300"
           >
             <div className="flex items-start justify-between mb-6">
               <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center">
