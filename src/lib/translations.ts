@@ -93,6 +93,13 @@ export const translations = {
       en: 'We are three Business students from Aalto University Mikkeli Campus, united by a passion for technology, the internet, and exceptional customer service. For us, perfection is not just a goal, but a standard feature. We work at the grassroots level, building websites entirely ourselves.',
     },
     teamTitle: { fi: 'Tiimi', en: 'The Team' },
+    contact: {
+      title: { fi: 'Yhteystiedot', en: 'Contact Us' },
+      company: 'Michel Digital',
+      location: 'Mikkeli, Finland',
+      email: 'hello@micheldigital.fi',
+      phone: { fi: 'Puhelin tulossa pian', en: 'Phone coming soon' },
+    },
   },
   team: {
     title: { fi: 'Tiimi', en: 'The Team' },
