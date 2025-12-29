@@ -9,7 +9,7 @@ export const translations = {
   },
   hero: {
     headline: {
-      fi: 'Mikkeliläistä digiosaamista – Modernit verkkosivut paikallisella otteella.',
+      fi: 'Verkkosivut, jotka muuttavat kävijät asiakkaiksi - Valitse Michel Media.',
       en: 'Digital Excellence from Mikkeli – Modern websites with a local touch.',
     },
     subtext: {
