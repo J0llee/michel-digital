@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Globe, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
+import logo from '@/assets/logo.png';
 
 interface NavbarProps {
   language: Language;
@@ -39,8 +40,12 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold text-foreground">
-            Michel <span className="text-primary">Digital</span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="Michel Digital" 
+              className="h-10 md:h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
