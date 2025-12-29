@@ -2,6 +2,7 @@ import { ArrowRight, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Language, translations } from '@/lib/translations';
+import cathedralBg from '@/assets/mikkeli-cathedral.jpg';
 
 interface HeroProps {
   language: Language;
@@ -11,13 +12,16 @@ export const Hero = ({ language }: HeroProps) => {
   const t = translations.hero;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent via-background to-background" />
-      
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      style={{
+        backgroundImage: `url(${cathedralBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/60" />
 
       <div className="container relative z-10 px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
@@ -26,7 +30,7 @@ export const Hero = ({ language }: HeroProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white border border-white/20 mb-8"
           >
             <MapPin className="w-4 h-4" />
             <span className="text-sm font-medium">Mikkeli, Finland</span>
@@ -37,7 +41,7 @@ export const Hero = ({ language }: HeroProps) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance"
           >
             {t.headline[language]}
           </motion.h1>
@@ -47,7 +51,7 @@ export const Hero = ({ language }: HeroProps) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-balance"
+            className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 text-balance"
           >
             {t.subtext[language]}
           </motion.p>
@@ -76,11 +80,11 @@ export const Hero = ({ language }: HeroProps) => {
         transition={{ delay: 1, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-2">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-primary rounded-full"
+            className="w-1.5 h-1.5 bg-white rounded-full"
           />
         </div>
       </motion.div>

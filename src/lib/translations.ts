@@ -119,4 +119,58 @@ export const translations = {
     madeWith: { fi: 'Tehty', en: 'Made with' },
     inMikkeli: { fi: 'Mikkelissä', en: 'in Mikkeli' },
   },
+  form: {
+    sectionTitle: {
+      fi: 'Pyydä ilmainen arvio projektistasi',
+      en: 'Request a free project estimate',
+    },
+    step1: {
+      title: { fi: 'Millainen projekti on kyseessä?', en: 'What type of project is this?' },
+    },
+    step2: {
+      title: { fi: 'Aikataulu ja budjetti', en: 'Timeline & Budget' },
+      timelineLabel: { fi: 'Aikataulu', en: 'Timeline' },
+      budgetLabel: { fi: 'Arvioitu budjetti', en: 'Estimated budget' },
+      budgetPlaceholder: { fi: 'esim. 500-1000€', en: 'e.g. 500-1000€' },
+    },
+    step3: {
+      title: { fi: 'Tärkeimmät ominaisuudet', en: 'Key Features' },
+    },
+    step4: {
+      title: { fi: 'Yhteystietosi', en: 'Your Contact Info' },
+      name: { fi: 'Nimi *', en: 'Name *' },
+      email: { fi: 'Sähköposti *', en: 'Email *' },
+      phone: { fi: 'Puhelin', en: 'Phone' },
+      company: { fi: 'Yritys (valinnainen)', en: 'Company (optional)' },
+    },
+    projectTypes: {
+      new: { fi: 'Uudet nettisivut', en: 'New website' },
+      redesign: { fi: 'Sivuston uudistus', en: 'Website redesign' },
+      ecommerce: { fi: 'Verkkokauppa', en: 'E-commerce' },
+      other: { fi: 'Muu/Pienkehitys', en: 'Other/Small development' },
+    },
+    timelines: {
+      urgent: { fi: 'Kiireellinen (< 2vko)', en: 'Urgent (< 2 weeks)' },
+      oneMonth: { fi: '1kk sisällä', en: 'Within 1 month' },
+      flexible: { fi: 'Ei kiirettä', en: 'No rush' },
+    },
+    features: {
+      multilingual: { fi: 'Kieliversiot (FI/EN)', en: 'Language versions (FI/EN)' },
+      booking: { fi: 'Ajanvarausjärjestelmä', en: 'Booking system' },
+      blog: { fi: 'Blogi/Uutiset', en: 'Blog/News' },
+      social: { fi: 'Some-integraatiot', en: 'Social media integrations' },
+    },
+    nav: {
+      back: { fi: 'Takaisin', en: 'Back' },
+      next: { fi: 'Seuraava', en: 'Next' },
+      submit: { fi: 'Lähetä', en: 'Submit' },
+    },
+    success: {
+      title: { fi: 'Kiitos!', en: 'Thank you!' },
+      message: {
+        fi: 'Olemme yhteydessä pian.',
+        en: "We'll be in touch soon.",
+      },
+    },
+  },
 } as const;
