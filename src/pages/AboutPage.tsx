@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Linkedin, MapPin, Mail, Phone } from 'lucide-react';
 import { Language, translations } from '@/lib/translations';
-import { ProjectInquiryForm } from '@/components/ProjectInquiryForm';
 import joelPhoto from '@/assets/team/joel.png';
 import valentinPhoto from '@/assets/team/valentin.png';
 import walfordPhoto from '@/assets/team/walford.png';
@@ -13,7 +12,6 @@ interface AboutPageProps {
 const AboutPage = ({ language }: AboutPageProps) => {
   const t = translations.about;
   const teamT = translations.team;
-  const formT = translations.form;
 
   const teamPhotos = [joelPhoto, valentinPhoto, walfordPhoto];
 
@@ -134,20 +132,6 @@ const AboutPage = ({ language }: AboutPageProps) => {
               </div>
             </div>
           </div>
-        </motion.div>
-
-        {/* Inquiry Form Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-16 max-w-2xl mx-auto"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-            {formT.sectionTitle[language]}
-          </h2>
-          <ProjectInquiryForm language={language} />
         </motion.div>
       </div>
     </div>
