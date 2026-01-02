@@ -96,9 +96,10 @@ export const translations = {
     contact: {
       title: { fi: 'Yhteystiedot', en: 'Contact Us' },
       company: 'Michel Digital',
+      address: 'Porrassalmenkatu 11 A 7, 50100 Mikkeli',
       location: 'Mikkeli, Finland',
-      email: 'hello@micheldigital.fi',
-      phone: { fi: 'Puhelin tulossa pian', en: 'Phone coming soon' },
+      email: 'info@michelmedia.fi',
+      phone: { fi: 'Tulossa pian', en: 'Coming soon' },
     },
   },
   team: {

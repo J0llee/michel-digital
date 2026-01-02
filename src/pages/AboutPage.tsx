@@ -111,36 +111,54 @@ const AboutPage = ({ language }: AboutPageProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-24 max-w-2xl mx-auto"
+          className="mt-24 max-w-4xl mx-auto"
         >
-          <div className="bg-accent/30 rounded-2xl p-8 md:p-12 border border-border text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+          <div className="bg-accent/30 rounded-2xl p-8 md:p-12 border border-border">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
               {t.contact.title[language]}
             </h2>
 
-            <div className="space-y-6">
-              <div className="flex items-center justify-center gap-3 text-lg">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-foreground font-medium">
-                  {t.contact.company}
-                </span>
-                <span className="text-muted-foreground">•</span>
-                <span className="text-muted-foreground">
-                  {t.contact.location}
-                </span>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              {/* Contact Details */}
+              <div className="space-y-6">
+                <div className="flex items-start gap-3 text-lg">
+                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <span className="text-foreground font-medium block">
+                      {t.contact.company}
+                    </span>
+                    <span className="text-muted-foreground">
+                      {t.contact.address}
+                    </span>
+                  </div>
+                </div>
+
+                <a
+                  href={`mailto:${t.contact.email}`}
+                  className="flex items-center gap-3 text-lg text-primary hover:underline transition-colors"
+                >
+                  <Mail className="w-5 h-5 flex-shrink-0" />
+                  <span>{t.contact.email}</span>
+                </a>
+
+                <div className="flex items-center gap-3 text-lg text-muted-foreground">
+                  <Phone className="w-5 h-5 flex-shrink-0" />
+                  <span>{t.contact.phone[language]}</span>
+                </div>
               </div>
 
-              <a
-                href={`mailto:${t.contact.email}`}
-                className="flex items-center justify-center gap-3 text-lg text-primary hover:underline transition-colors"
-              >
-                <Mail className="w-5 h-5 flex-shrink-0" />
-                <span>{t.contact.email}</span>
-              </a>
-
-              <div className="flex items-center justify-center gap-3 text-lg text-muted-foreground">
-                <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>{t.contact.phone[language]}</span>
+              {/* Google Maps Embed */}
+              <div className="w-full h-64 rounded-xl overflow-hidden border border-border shadow-sm">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.8977897876!2d27.272854!3d61.6876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469a1e7c8f5e4b0f%3A0x0!2sPorrassalmenkatu%2011%2C%2050100%20Mikkeli!5e0!3m2!1sen!2sfi!4v1"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Michel Digital Location"
+                />
               </div>
             </div>
           </div>
