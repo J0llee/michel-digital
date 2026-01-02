@@ -1,76 +1,32 @@
 import { Link } from 'react-router-dom';
 
 export const Logo = () => {
-  const darkGray = '#3D4548';
-  const orange = '#E8833A';
-
   return (
     <Link to="/" className="flex items-center group">
-      <svg
-        viewBox="0 0 280 60"
-        className="h-10 md:h-12 w-auto"
-        aria-label="Michel Media"
-      >
-        {/* Left angle bracket < */}
-        <polygon
-          points="0,30 18,10 24,10 10,30 24,50 18,50"
-          fill={darkGray}
-        />
-        
-        {/* M - Left diagonal leg (dark) */}
-        <polygon
-          points="26,10 32,10 50,50 44,50"
-          fill={darkGray}
-        />
-        
-        {/* M - Right diagonal leg (dark) */}
-        <polygon
-          points="68,10 74,10 56,50 50,50"
-          fill={darkGray}
-        />
-        
-        {/* M - Orange diagonal stroke (left to center) */}
-        <polygon
-          points="32,50 38,50 56,10 50,10"
-          fill={orange}
-        />
-        
-        {/* M - Orange diagonal stroke (right to center) */}
-        <polygon
-          points="62,50 68,50 50,10 44,10"
-          fill={orange}
-        />
-        
-        {/* Right angle bracket > */}
-        <polygon
-          points="100,30 82,10 76,10 90,30 76,50 82,50"
-          fill={darkGray}
-        />
-        
-        {/* Text: Michel */}
-        <text
-          x="115"
-          y="28"
-          fontFamily="Inter, system-ui, -apple-system, sans-serif"
-          fontWeight="700"
-          fontSize="22"
-          fill={darkGray}
-        >
-          Michel
-        </text>
-        
-        {/* Text: Media */}
-        <text
-          x="115"
-          y="52"
-          fontFamily="Inter, system-ui, -apple-system, sans-serif"
-          fontWeight="700"
-          fontSize="22"
-          fill={orange}
-        >
-          Media
-        </text>
-      </svg>
+      <div className="flex items-center gap-3">
+        {/* The Icon Part */}
+        <svg width="50" height="50" viewBox="0 0 85 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Left Bracket < */}
+          <path d="M20 15 L5 35 L20 55" stroke="#333333" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+          
+          {/* The M Structure */}
+          {/* Left Grey Leg */}
+          <path d="M30 15 V55" stroke="#333333" strokeWidth="6" strokeLinecap="round"/>
+          {/* Middle Orange V */}
+          <path d="M30 15 L42.5 45 L55 15" stroke="#F97316" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Right Grey Leg */}
+          <path d="M55 15 V55" stroke="#333333" strokeWidth="6" strokeLinecap="round"/>
+          
+          {/* Right Bracket > */}
+          <path d="M65 15 L80 35 L65 55" stroke="#333333" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+
+        {/* The Text Part */}
+        <div className="flex flex-col justify-center leading-none">
+          <span className="text-xl font-bold text-[#333333] tracking-tight">Michel</span>
+          <span className="text-xl font-bold text-[#F97316] tracking-tight">Media</span>
+        </div>
+      </div>
     </Link>
   );
 };
