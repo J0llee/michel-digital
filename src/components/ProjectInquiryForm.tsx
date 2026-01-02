@@ -142,7 +142,7 @@ export const ProjectInquiryForm = ({ language }: ProjectInquiryFormProps) => {
   };
 
   const handleSubmit = () => {
-    console.log('Form Data sent to Michel Digital email:', formData);
+    console.log('Form Data sent to Michel Media email:', formData);
     setIsSubmitted(true);
   };
 

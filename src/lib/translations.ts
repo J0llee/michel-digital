@@ -95,7 +95,7 @@ export const translations = {
     teamTitle: { fi: 'Tiimi', en: 'The Team' },
     contact: {
       title: { fi: 'Yhteystiedot', en: 'Contact Us' },
-      company: 'Michel Digital',
+      company: 'Michel Media',
       address: 'Porrassalmenkatu 11 A 7, 50100 Mikkeli',
       location: 'Mikkeli, Finland',
       email: 'info@michelmedia.fi',
