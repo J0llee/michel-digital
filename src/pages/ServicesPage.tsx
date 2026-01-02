@@ -67,7 +67,7 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
               {t.website.title[language]}
             </h2>
             <div className="flex items-baseline gap-1 mb-6">
-              <span className="text-5xl font-bold text-primary">{t.website.price}</span>
+              <span className="text-5xl font-bold text-primary">{t.website.price[language]}</span>
             </div>
             
             <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
