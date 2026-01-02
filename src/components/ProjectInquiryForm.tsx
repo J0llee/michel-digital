@@ -49,7 +49,7 @@ const translations = {
     timeline: {
       label: { fi: 'Aikataulu', en: 'Timeline' },
       options: {
-        urgent: { fi: 'Kiireellinen (< 2 viikkoa)', en: 'Urgent (< 2 weeks)' },
+        urgent: { fi: 'Kiireellinen (alle viikko)', en: 'Urgent (< 1 week)' },
         'one-month': { fi: '1 kuukauden sisällä', en: 'Within 1 month' },
         'no-rush': { fi: 'Ei kiirettä', en: 'No rush' },
       },
