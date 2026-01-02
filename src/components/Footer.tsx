@@ -51,7 +51,7 @@ export const Footer = ({
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/50 text-sm">
-            © {currentYear} Michel Digital. {t.rights[language]}
+            © {currentYear} Michel Media. {t.rights[language]}
           </p>
           <p className="text-background/50 text-sm flex items-center gap-1">
             {t.madeWith[language]} <Heart className="w-4 h-4 text-primary" /> {t.inMikkeli[language]}
