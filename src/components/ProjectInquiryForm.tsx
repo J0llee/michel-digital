@@ -50,7 +50,7 @@ const translations = {
       label: { fi: 'Aikataulu', en: 'Timeline' },
       options: {
         urgent: { fi: 'Kiireellinen (alle viikko)', en: 'Urgent (< 1 week)' },
-        'one-month': { fi: '1 kuukauden sisällä', en: 'Within 1 month' },
+        'one-month': { fi: 'Normaali (suunnittelu ja tilaus n. viikko ja sivujen teko takuulla viikossa)', en: 'Normal (planning ~1 week, site delivery guaranteed within a week)' },
         'no-rush': { fi: 'Ei kiirettä', en: 'No rush' },
       },
     },
