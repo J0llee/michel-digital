@@ -157,7 +157,7 @@ const AboutPage = ({ language }: AboutPageProps) => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Michel Digital Location"
+                  title="Michel Media Location"
                 />
               </div>
             </div>
