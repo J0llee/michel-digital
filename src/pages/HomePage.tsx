@@ -20,8 +20,11 @@ const HomePage = ({ language }: HomePageProps) => {
   return (
     <>
       <Hero language={language} />
+      
+      {/* Credibility Section - Moved up */}
+      <Credibility language={language} />
 
-      {/* Project Inquiry Form Section */}
+      {/* Project Inquiry Form Section - Moved down */}
       <section className="py-20 bg-accent/30">
         <div className="container px-6">
           <motion.div
@@ -47,7 +50,7 @@ const HomePage = ({ language }: HomePageProps) => {
         </div>
       </section>
 
-      <Credibility language={language} />
+      {/* Services Teaser */}
       <ServicesTeaser language={language} />
     </>
   );
