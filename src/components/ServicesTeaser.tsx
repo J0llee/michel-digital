@@ -60,7 +60,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
               {t.website.title[language]}
             </h3>
             <div className="flex items-baseline gap-1 mb-4">
-              <span className="text-4xl font-bold text-primary">{t.website.price}</span>
+              <span className="text-4xl font-bold text-primary">{t.website.price[language]}</span>
             </div>
             <p className="text-muted-foreground mb-6">
               {t.website.description[language]}
