@@ -25,7 +25,7 @@ export const Footer = ({
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              Michel <span className="text-primary">Digital</span>
+              Michel <span className="text-primary">Media</span>
             </h3>
             <p className="text-background/70 max-w-sm">
               {language === 'fi' ? 'Moderneja verkkosivuja paikallisella otteella.' : 'Modern websites with a local touch.'}
