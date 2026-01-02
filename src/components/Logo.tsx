@@ -1,62 +1,72 @@
 import { Link } from 'react-router-dom';
 
 export const Logo = () => {
+  const darkGray = '#3D4548';
+  const orange = '#E8833A';
+
   return (
     <Link to="/" className="flex items-center group">
       <svg
-        viewBox="0 0 200 50"
+        viewBox="0 0 280 60"
         className="h-10 md:h-12 w-auto"
         aria-label="Michel Media"
       >
         {/* Left angle bracket < */}
-        <path
-          d="M8 25 L18 15 L20 17 L12 25 L20 33 L18 35 Z"
-          fill="#1F2937"
+        <polygon
+          points="0,30 18,10 24,10 10,30 24,50 18,50"
+          fill={darkGray}
         />
         
-        {/* M letter */}
-        {/* Left vertical leg */}
-        <path
-          d="M28 14 L32 14 L32 36 L28 36 Z"
-          fill="#1F2937"
+        {/* M - Left diagonal leg (dark) */}
+        <polygon
+          points="26,10 32,10 50,50 44,50"
+          fill={darkGray}
         />
-        {/* Right vertical leg */}
-        <path
-          d="M48 14 L52 14 L52 36 L48 36 Z"
-          fill="#1F2937"
+        
+        {/* M - Right diagonal leg (dark) */}
+        <polygon
+          points="68,10 74,10 56,50 50,50"
+          fill={darkGray}
         />
-        {/* Center V shape (orange) */}
-        <path
-          d="M32 14 L40 28 L48 14 L52 14 L40 36 L28 14 Z"
-          fill="#F97316"
+        
+        {/* M - Orange diagonal stroke (left to center) */}
+        <polygon
+          points="32,50 38,50 56,10 50,10"
+          fill={orange}
+        />
+        
+        {/* M - Orange diagonal stroke (right to center) */}
+        <polygon
+          points="62,50 68,50 50,10 44,10"
+          fill={orange}
         />
         
         {/* Right angle bracket > */}
-        <path
-          d="M72 25 L62 15 L60 17 L68 25 L60 33 L62 35 Z"
-          fill="#1F2937"
+        <polygon
+          points="100,30 82,10 76,10 90,30 76,50 82,50"
+          fill={darkGray}
         />
         
         {/* Text: Michel */}
         <text
-          x="82"
-          y="22"
-          fontFamily="Inter, system-ui, sans-serif"
+          x="115"
+          y="28"
+          fontFamily="Inter, system-ui, -apple-system, sans-serif"
           fontWeight="700"
-          fontSize="14"
-          fill="#1F2937"
+          fontSize="22"
+          fill={darkGray}
         >
           Michel
         </text>
         
         {/* Text: Media */}
         <text
-          x="82"
-          y="38"
-          fontFamily="Inter, system-ui, sans-serif"
+          x="115"
+          y="52"
+          fontFamily="Inter, system-ui, -apple-system, sans-serif"
           fontWeight="700"
-          fontSize="14"
-          fill="#F97316"
+          fontSize="22"
+          fill={orange}
         >
           Media
         </text>
