@@ -13,7 +13,7 @@ export const translations = {
       en: 'Digital Excellence from Mikkeli – Modern websites with a local touch.',
     },
     subtext: {
-      fi: 'Mikkeliläistä digiosaamista - Modernit verkkosivut paikallisella otteella. Tämä verkkosivu on 100% meidän itsemme suunnittelema ja toteuttama käyttäen uusimpia työkaluja ja teknologioita. Rakennamme parhaillaan portfoliotamme – tule mukaan kasvutarinaan.',
+      fi: 'Mikkeliläistä digiosaamista - Modernit verkkosivut paikallisella otteella. Tämä verkkosivu on 100% meidän itsemme suunnittelema ja toteuttama käyttäen uusimpia työkaluja ja tekn[...]',
       en: "This website was 100% designed and built by us using the latest tools and technology. We are currently building our portfolio – join our growth story.",
     },
     cta: { fi: 'Ota yhteyttä', en: 'Contact Us' },
@@ -56,8 +56,8 @@ export const translations = {
         en: 'Management, optimization, and analytics. We keep your site running smoothly.',
       },
       detailedDescription: {
-        fi: 'Emme vain ylläpidä, vaan kehitämme. Seuraamme kävijädataa ja analytiikkaa aktiivisesti. Muokkaamme sivustoa datan perusteella jatkuvasti houkuttelevammaksi ja myyvemmäksi. Sisältää myös tietoturvapäivitykset.',
-        en: "We don't just maintain; we improve. We actively track visitor data and analytics. We continuously optimize the site based on data to be more attractive and drive more sales. Includes security updates.",
+        fi: 'Emme vain ylläpidä, vaan kehitämme. Seuraamme kävijädataa ja analytiikkaa aktiivisesti. Muokkaamme sivustoa datan perusteella jatkuvasti houkuttelevammaksi ja myyvemmäksi. Sisä[...]',
+        en: "We don't just maintain; we improve. We actively track visitor data and analytics. We continuously optimize the site based on data to be more attractive and drive more sales. Includes [...]",
       },
       features: {
         fi: ['Sisällönhallinta', 'Analytiikka', 'Tietoturvapäivitykset', 'Jatkuva tuki'],
@@ -80,7 +80,7 @@ export const translations = {
   },
   references: {
     title: { fi: 'Referenssit', en: 'References' },
-    0451331823: { fi: '0451331823', en: '0451331823' },
+    comingSoon: { fi: '0451331813', en: '0451331813' },
     description: {
       fi: 'Työskentelemme parhaillaan ensimmäisten asiakasprojektiemme parissa. Tämä verkkosivu on paras todiste osaamisestamme – suunniteltu ja toteutettu kokonaan itse.',
       en: "We're currently working on our first client projects. This website is the best proof of our skills – designed and built entirely by ourselves.",
@@ -89,8 +89,8 @@ export const translations = {
   about: {
     title: { fi: 'Meistä', en: 'About Us' },
     story: {
-      fi: 'Olemme kolme Aalto-yliopiston kauppatieteiden opiskelijaa Mikkelin kampukselta. Meitä yhdistää intohimo teknologiaan, internetiin ja ensiluokkaiseen asiakaspalveluun. Meille täydellisyys ei ole vain tavoite, vaan perusominaisuus. Työskentelemme ruohonjuuritasolla ja rakennamme verkkosivut alusta loppuun itse.',
-      en: 'We are three Business students from Aalto University Mikkeli Campus, united by a passion for technology, the internet, and exceptional customer service. For us, perfection is not just a goal, but a standard feature. We work at the grassroots level, building websites entirely ourselves.',
+      fi: 'Olemme kolme Aalto-yliopiston kauppatieteiden opiskelijaa Mikkelin kampukselta. Meitä yhdistää intohimo teknologiaan, internetiin ja ensiluokkaiseen asiakaspalveluun. Meille täydell[...]',
+      en: 'We are three Business students from Aalto University Mikkeli Campus, united by a passion for technology, the internet, and exceptional customer service. For us, perfection is not just a[...]',
     },
     teamTitle: { fi: 'Tiimi', en: 'The Team' },
     contact: {
