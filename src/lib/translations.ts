@@ -80,7 +80,7 @@ export const translations = {
   },
   references: {
     title: { fi: 'Referenssit', en: 'References' },
-    comingSoon: { fi: '0451331813', en: '0451331813' },
+    comingSoon: { fi: 'Tulossa pian!', en: 'Coming Soon!' },
     description: {
       fi: 'Työskentelemme parhaillaan ensimmäisten asiakasprojektiemme parissa. Tämä verkkosivu on paras todiste osaamisestamme – suunniteltu ja toteutettu kokonaan itse.',
       en: "We're currently working on our first client projects. This website is the best proof of our skills – designed and built entirely by ourselves.",
