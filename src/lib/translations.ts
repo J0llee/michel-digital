@@ -56,8 +56,8 @@ export const translations = {
         en: 'Management, optimization, and analytics. We keep your site running smoothly.',
       },
       detailedDescription: {
-        fi: 'Emme vain ylläpidä, vaan kehitämme. Seuraamme kävijädataa ja analytiikkaa aktiivisesti. Muokkaamme sivustoa datan perusteella jatkuvasti houkuttelevammaksi ja myyvemmäksi. Sisä[...]',
-        en: "We don't just maintain; we improve. We actively track visitor data and analytics. We continuously optimize the site based on data to be more attractive and drive more sales. Includes [...]",
+        fi: 'Emme vain ylläpidä, vaan kehitämme. Seuraamme kävijädataa ja analytiikkaa aktiivisesti. Muokkaamme sivustoa datan perusteella jatkuvasti houkuttelevammaksi ja myyvemmäksi.',
+        en: "We don't just maintain; we improve. We actively track visitor data and analytics. We continuously optimize the site based on data to be more attractive and drive more sales.",
       },
       features: {
         fi: ['Sisällönhallinta', 'Analytiikka', 'Tietoturvapäivitykset', 'Jatkuva tuki'],
