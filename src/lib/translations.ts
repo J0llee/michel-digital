@@ -89,8 +89,8 @@ export const translations = {
   about: {
     title: { fi: 'Meistä', en: 'About Us' },
     story: {
-      fi: 'Olemme kolme Aalto-yliopiston kauppatieteiden opiskelijaa Mikkelin kampukselta. Meitä yhdistää intohimo teknologiaan, internetiin ja ensiluokkaiseen asiakaspalveluun. Meille täydell[...]',
-      en: 'We are three Business students from Aalto University Mikkeli Campus, united by a passion for technology, the internet, and exceptional customer service. For us, perfection is not just a[...]',
+      fi: 'Olemme kolme Aalto-yliopiston kauppatieteiden opiskelijaa Mikkelin kampukselta. Meitä yhdistää intohimo teknologiaan, internetiin ja ensiluokkaiseen asiakaspalveluun. Meille täydellisyys ei ole vain tavoite, vaan perusominaisuus. Työskentelemme ruohonjuuritasolla ja rakennamme verkkosivut alusta loppuun itse.',
+      en: 'We are three Business students from Aalto University Mikkeli Campus, united by a passion for technology, the internet, and exceptional customer service. For us, perfection is not just a goal, but a standard feature. We work at the grassroots level, building websites entirely ourselves.',
     },
     teamTitle: { fi: 'Tiimi', en: 'The Team' },
     contact: {
