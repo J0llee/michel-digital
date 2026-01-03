@@ -31,7 +31,7 @@ export const translations = {
     readMore: { fi: 'Tutustu tarkemmin palveluihin', en: 'Read more about services' },
     website: {
       title: { fi: 'Verkkosivuprojekti', en: 'Website Project' },
-      price: { fi: 'Alkaen 500€', en: 'From 500€' },
+      price: { fi: 'Alkaen 799€', en: 'From 799€' },
       keyPoint: { fi: 'Toimitus 1 viikossa', en: 'Delivery in 1 week' },
       description: {
         fi: 'Moderni, mobiilioptimoitu nettisivu yrityksellesi.',
