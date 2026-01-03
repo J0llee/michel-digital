@@ -99,7 +99,7 @@ export const translations = {
       address: 'Porrassalmenkatu 11 A 7, 50100 Mikkeli',
       location: 'Mikkeli, Finland',
       email: 'info@michelmedia.fi',
-      phone: { fi: 'Tulossa pian', en: 'Coming soon' },
+      phone: { fi: '0451331813', en: '0451331813' },
     },
   },
   team: {
