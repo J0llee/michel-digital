@@ -152,7 +152,7 @@ const ServicesPage = ({
             {t.cta.description[language]}
           </p>
           
-          <a href="mailto:hello@micheldigital.fi" className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors mb-6">
+          <a className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors mb-6" href="mailto:info@michelmedia.fi">
             <Mail className="w-5 h-5" />
             info@michelmedia.fi
           </a>
