@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Linkedin, MapPin, Mail, Phone } from 'lucide-react';
 import { Language, translations } from '@/lib/translations';
-import { ProjectInquiryForm } from '@/components/ProjectInquiryForm';
 import joelPhoto from '@/assets/team/joel.png';
 import valentinPhoto from '@/assets/team/valentin.png';
 import walfordPhoto from '@/assets/team/walford.png';
@@ -9,13 +8,6 @@ import walfordPhoto from '@/assets/team/walford.png';
 interface AboutPageProps {
   language: Language;
 }
-
-const formTranslations = {
-  title: {
-    fi: 'Pyydä ilmainen arvio projektistasi',
-    en: 'Request a free project estimate',
-  },
-};
 
 const AboutPage = ({ language }: AboutPageProps) => {
   const t = translations.about;
@@ -141,10 +133,13 @@ const AboutPage = ({ language }: AboutPageProps) => {
                   <span>{t.contact.email}</span>
                 </a>
 
-                <div className="flex items-center gap-3 text-lg text-muted-foreground">
+                <a
+                  href="tel:0451331813"
+                  className="flex items-center gap-3 text-lg text-primary hover:underline transition-colors"
+                >
                   <Phone className="w-5 h-5 flex-shrink-0" />
                   <span>{t.contact.phone[language]}</span>
-                </div>
+                </a>
               </div>
 
               {/* Google Maps Embed */}
@@ -162,20 +157,6 @@ const AboutPage = ({ language }: AboutPageProps) => {
               </div>
             </div>
           </div>
-        </motion.div>
-
-        {/* Project Inquiry Form Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-16 max-w-2xl mx-auto"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-            {formTranslations.title[language]}
-          </h2>
-          <ProjectInquiryForm language={language} />
         </motion.div>
       </div>
     </div>

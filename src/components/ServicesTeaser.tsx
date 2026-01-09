@@ -59,9 +59,12 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             <h3 className="text-2xl font-bold text-foreground mb-2">
               {t.website.title[language]}
             </h3>
-            <div className="flex items-baseline gap-1 mb-4">
+            <div className="flex items-baseline gap-1 mb-2">
               <span className="text-4xl font-bold text-primary">{t.website.price[language]}</span>
             </div>
+            <p className="text-sm font-medium text-primary/80 mb-4">
+              {t.website.keyPoint[language]}
+            </p>
             <p className="text-muted-foreground mb-6">
               {t.website.description[language]}
             </p>
@@ -88,7 +91,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
               {t.maintenance.title[language]}
             </h3>
             <div className="flex items-baseline gap-1 mb-4">
-              <span className="text-4xl font-bold text-primary">{t.maintenance.price}</span>
+              <span className="text-4xl font-bold text-primary">{t.maintenance.price[language]}</span>
               <span className="text-muted-foreground">{t.maintenance.period[language]}</span>
             </div>
             <p className="text-muted-foreground mb-6">
