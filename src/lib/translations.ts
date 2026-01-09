@@ -48,7 +48,7 @@ export const translations = {
     },
     maintenance: {
       title: { fi: 'Kasvu & Ylläpito', en: 'Growth & Maintenance' },
-      price: '45€',
+      price: { fi: 'Alkaen 45€', en: 'Starting at 45€' },
       period: { fi: '/ kk (min. 3 kk)', en: '/ month (min. 3 months)' },
       keyPoint: { fi: 'Jatkuva optimointi & myynnin kasvu', en: 'Continuous Optimization & Sales Growth' },
       description: {
@@ -89,8 +89,8 @@ export const translations = {
   about: {
     title: { fi: 'Meistä', en: 'About Us' },
     story: {
-      fi: 'Olemme kolme Aalto-yliopiston kauppatieteiden opiskelijaa Mikkelin kampukselta. Meitä yhdistää intohimo teknologiaan, internetiin ja ensiluokkaiseen asiakaspalveluun. Meille täydellisyys ei ole vain tavoite, vaan perusominaisuus. Työskentelemme ruohonjuuritasolla ja rakennamme verkkosivut alusta loppuun itse.',
-      en: 'We are three Business students from Aalto University Mikkeli Campus, united by a passion for technology, the internet, and exceptional customer service. For us, perfection is not just a goal, but a standard feature. We work at the grassroots level, building websites entirely ourselves.',
+      fi: 'Olemme kolme Aalto-yliopiston kauppatieteiden opiskelijaa Mikkelin kampukselta. Meitä yhdistää intohimo teknologiaan, internetiin ja ensiluokkaiseen asiakaspalveluun. Meille täydellisyys ei ole vain tavoite, vaan perusominaisuus. Työskentelemme suurella sydämellä ja henkilökohtaisella otteella ja rakennamme verkkosivut alusta loppuun itse.',
+      en: 'We are three Business students from Aalto University Mikkeli Campus, united by a passion for technology, the internet, and exceptional customer service. For us, perfection is not just a goal, but a standard feature. We work with a dedicated, hands-on approach, building websites entirely ourselves.',
     },
     teamTitle: { fi: 'Tiimi', en: 'The Team' },
     contact: {

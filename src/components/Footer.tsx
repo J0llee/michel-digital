@@ -1,4 +1,4 @@
-import { Heart, Mail, MapPin } from 'lucide-react';
+import { Heart, Mail, MapPin, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 interface FooterProps {
@@ -39,6 +39,10 @@ export const Footer = ({
               <a className="flex items-center gap-3 hover:text-primary transition-colors" href="mailto:info@michelmedia.fi">
                 <Mail className="w-5 h-5" />
                 info@michelmedia.fi
+              </a>
+              <a className="flex items-center gap-3 hover:text-primary transition-colors" href="tel:0451331813">
+                <Phone className="w-5 h-5" />
+                0451331813
               </a>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5" />
