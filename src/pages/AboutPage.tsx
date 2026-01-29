@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Linkedin, MapPin, Mail, Phone } from 'lucide-react';
 import { Language, translations } from '@/lib/translations';
-import joelPhoto from '@/assets/team/joel.png';
+import joelPhoto from '@/assets/team/joel.jpg';
 import valentinPhoto from '@/assets/team/valentin.jpg';
 import walfordPhoto from '@/assets/team/walford.jpg';
 
