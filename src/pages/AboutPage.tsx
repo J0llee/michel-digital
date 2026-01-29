@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { Linkedin, MapPin, Mail, Phone } from 'lucide-react';
 import { Language, translations } from '@/lib/translations';
 import joelPhoto from '@/assets/team/joel.png';
-import valentinPhoto from '@/assets/team/valentin.png';
-import walfordPhoto from '@/assets/team/walford.png';
+import valentinPhoto from '@/assets/team/valentin.jpg';
+import walfordPhoto from '@/assets/team/walford.jpg';
 
 interface AboutPageProps {
   language: Language;
@@ -77,7 +77,7 @@ const AboutPage = ({ language }: AboutPageProps) => {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-2xl block shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="relative mb-6 mx-auto w-48 aspect-square overflow-hidden rounded-2xl block shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
@@ -86,7 +86,7 @@ const AboutPage = ({ language }: AboutPageProps) => {
                 <img
                   src={teamPhotos[index]}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </a>
               <h3 className="text-xl font-bold text-foreground mb-1">
