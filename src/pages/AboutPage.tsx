@@ -86,7 +86,7 @@ const AboutPage = ({ language }: AboutPageProps) => {
                 <img
                   src={teamPhotos[index]}
                   alt={member.name}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${index === 0 ? 'object-center' : 'object-top'}`}
                 />
               </a>
               <h3 className="text-xl font-bold text-foreground mb-1">
