@@ -1,172 +1,219 @@
-import { Check, Sparkles, Wrench, Clock, TrendingUp, Mail, ArrowRight } from 'lucide-react';
+import { Check, Sparkles, Wrench, PenTool, Clock, TrendingUp, Mail, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Language, translations } from '@/lib/translations';
+
 interface ServicesPageProps {
   language: Language;
 }
-const ServicesPage = ({
-  language
-}: ServicesPageProps) => {
+
+const cardSpring = {
+  type: 'spring' as const,
+  stiffness: 300,
+  damping: 20,
+};
+
+const ServicesPage = ({ language }: ServicesPageProps) => {
   const t = translations.services;
-  const containerVariants = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 40
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-  return <section className="pt-32 pb-24 min-h-screen">
+
+  return (
+    <section className="pt-32 pb-24 min-h-screen mesh-gradient">
       <div className="container px-6">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.5
-      }} className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-20"
+        >
+          <h1 className="text-5xl md:text-6xl font-extrabold text-foreground mb-4 tracking-tighter">
             {t.title[language]}
           </h1>
         </motion.div>
 
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Website Project Card */}
-          <motion.div variants={cardVariants} whileHover={{
-          scale: 1.02,
-          boxShadow: '0 20px 40px -15px rgba(0,0,0,0.15)'
-        }} className="bg-card rounded-2xl p-8 shadow-card border border-border transition-all duration-300">
+        {/* Bento Grid - Asymmetric Layout */}
+        <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          
+          {/* Website Project - Featured Large Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            whileHover={{ y: -8, transition: cardSpring }}
+            className="lg:col-span-2 lg:row-span-2 glass-card rounded-3xl p-10 flex flex-col relative overflow-hidden group"
+          >
+            {/* Decorative glow */}
+            <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/8 rounded-full blur-3xl group-hover:bg-primary/15 transition-colors duration-700" />
+            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+            
+            <div className="relative z-10 flex-1 flex flex-col">
+              <div className="flex items-start justify-between mb-8">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
+                  <Sparkles className="w-7 h-7 text-primary" />
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
+                  <Clock className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-bold text-primary">
+                    {t.website.keyPoint[language]}
+                  </span>
+                </div>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6 tracking-tight">
+                {t.website.title[language]}
+              </h2>
+
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
+                {t.website.detailedDescription[language]}
+              </p>
+
+              <div className="border-t border-border/50 pt-8 mb-8">
+                <h3 className="font-bold text-foreground mb-5 text-sm uppercase tracking-wider">
+                  {language === 'fi' ? 'Sisältää' : 'Includes'}
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {t.website.features[language].map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3 text-foreground/80">
+                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-primary" />
+                      </div>
+                      <span className="text-sm font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-auto">
+                <Link
+                  to="/about"
+                  className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:shadow-card-hover transition-all duration-300"
+                >
+                  {t.website.price[language]}
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Modifications Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            whileHover={{ y: -6, transition: cardSpring }}
+            className="glass-card rounded-3xl p-8 flex flex-col group"
+          >
             <div className="flex items-start justify-between mb-6">
-              <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center">
-                <Sparkles className="w-7 h-7 text-primary" />
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
-                <Clock className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">
-                  {t.website.keyPoint[language]}
-                </span>
+              <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
+                <PenTool className="w-6 h-6 text-primary" />
               </div>
             </div>
-            
-            <h2 className="text-2xl font-bold text-foreground mb-2">
-              {t.website.title[language]}
+
+            <h2 className="text-xl font-extrabold text-foreground mb-2 tracking-tight">
+              {t.modifications.title[language]}
             </h2>
-            <div className="flex items-baseline gap-1 mb-6">
-              <span className="text-5xl font-bold text-primary">{t.website.price[language]}</span>
+            <div className="flex items-baseline gap-1 mb-4">
+              <span className="text-4xl font-extrabold text-primary">{t.modifications.price[language]}</span>
+              <span className="text-muted-foreground font-medium">{t.modifications.period[language]}</span>
             </div>
-            
-            <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-              {t.website.detailedDescription[language]}
+
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              {t.modifications.detailedDescription[language]}
             </p>
-            
-            <div className="border-t border-border pt-6">
-              <h3 className="font-semibold text-foreground mb-4">
-                {language === 'fi' ? 'Sisältää:' : 'Includes:'}
-              </h3>
-              <ul className="space-y-3">
-                {t.website.features[language].map((feature, index) => <li key={index} className="flex items-center gap-3 text-foreground">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0" />
+
+            <div className="border-t border-border/50 pt-5">
+              <ul className="space-y-2.5">
+                {t.modifications.features[language].map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2.5 text-sm text-foreground/80">
+                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
                     <span>{feature}</span>
-                  </li>)}
+                  </li>
+                ))}
               </ul>
             </div>
           </motion.div>
 
           {/* Maintenance Card */}
-          <motion.div variants={cardVariants} whileHover={{
-          scale: 1.02,
-          boxShadow: '0 20px 40px -15px rgba(0,0,0,0.15)'
-        }} className="bg-card rounded-2xl p-8 shadow-card border border-border transition-all duration-300">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            whileHover={{ y: -6, transition: cardSpring }}
+            className="glass-card rounded-3xl p-8 flex flex-col group"
+          >
             <div className="flex items-start justify-between mb-6">
-              <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center">
-                <Wrench className="w-7 h-7 text-primary" />
+              <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
+                <Wrench className="w-6 h-6 text-primary" />
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
-                <TrendingUp className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full">
+                <TrendingUp className="w-3.5 h-3.5 text-primary" />
+                <span className="text-xs font-bold text-primary">
                   {t.maintenance.keyPoint[language]}
                 </span>
               </div>
             </div>
-            
-            <h2 className="text-2xl font-bold text-foreground mb-2">
+
+            <h2 className="text-xl font-extrabold text-foreground mb-2 tracking-tight">
               {t.maintenance.title[language]}
             </h2>
-            <div className="flex items-baseline gap-1 mb-6">
-              <span className="text-5xl font-bold text-primary">{t.maintenance.price[language]}</span>
-              <span className="text-muted-foreground text-lg">{t.maintenance.period[language]}</span>
+            <div className="flex items-baseline gap-1 mb-4">
+              <span className="text-4xl font-extrabold text-primary">{t.maintenance.price[language]}</span>
+              <span className="text-muted-foreground font-medium">{t.maintenance.period[language]}</span>
             </div>
-            
-            <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+
+            <p className="text-muted-foreground mb-6 leading-relaxed">
               {t.maintenance.detailedDescription[language]}
             </p>
-            
-            <div className="border-t border-border pt-6">
-              <h3 className="font-semibold text-foreground mb-4">
-                {language === 'fi' ? 'Sisältää:' : 'Includes:'}
-              </h3>
-              <ul className="space-y-3">
-                {t.maintenance.features[language].map((feature, index) => <li key={index} className="flex items-center gap-3 text-foreground">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0" />
+
+            <div className="border-t border-border/50 pt-5">
+              <ul className="space-y-2.5">
+                {t.maintenance.features[language].map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2.5 text-sm text-foreground/80">
+                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
                     <span>{feature}</span>
-                  </li>)}
+                  </li>
+                ))}
               </ul>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 40
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.5,
-        delay: 0.6
-      }} className="max-w-3xl mx-auto mt-16 bg-accent/30 rounded-2xl p-8 md:p-12 text-center border border-border">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            {t.cta.title[language]}
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8">
-            {t.cta.description[language]}
-          </p>
-          
-          <a className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors mb-6" href="mailto:info@michelmedia.fi">
-            <Mail className="w-5 h-5" />
-            info@michelmedia.fi
-          </a>
-          
-          <p className="text-muted-foreground mb-4">
-            {t.cta.teamLabel[language]}
-          </p>
-          
-          <Link to="/about" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
-            {t.cta.teamLink[language]}
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="max-w-3xl mx-auto mt-20 glass-card rounded-3xl p-10 md:p-14 text-center relative overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4 tracking-tight">
+              {t.cta.title[language]}
+            </h2>
+            <p className="text-muted-foreground text-lg mb-8 max-w-md mx-auto">
+              {t.cta.description[language]}
+            </p>
+
+            <a
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-bold hover:shadow-card-hover transition-all duration-300 mb-6"
+              href="mailto:info@michelmedia.fi"
+            >
+              <Mail className="w-5 h-5" />
+              info@michelmedia.fi
+            </a>
+
+            <p className="text-muted-foreground mb-4 text-sm">
+              {t.cta.teamLabel[language]}
+            </p>
+
+            <Link to="/about" className="inline-flex items-center gap-2 text-primary font-bold hover:underline group">
+              {t.cta.teamLink[language]}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
         </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesPage;
