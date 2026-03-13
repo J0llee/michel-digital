@@ -102,7 +102,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
               {t.modifications.description[language]}
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-5">
               {t.modifications.features[language].slice(0, 3).map((f, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm text-foreground/80">
                   <Check className="w-3.5 h-3.5 text-primary flex-shrink-0" />
@@ -110,6 +110,15 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
                 </li>
               ))}
             </ul>
+            <div className="mt-auto">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full font-bold text-sm hover:shadow-card-hover transition-all duration-300 group/btn"
+              >
+                {t.website.price[language]}
+                <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5" />
+              </Link>
+            </div>
           </motion.div>
 
           {/* Maintenance */}
