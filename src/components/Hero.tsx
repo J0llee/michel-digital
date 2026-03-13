@@ -18,7 +18,7 @@ const wordVariants = {
     transition: {
       delay: 0.1 + i * 0.04,
       duration: 0.6,
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 100,
       damping: 20,
     },
