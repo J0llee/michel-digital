@@ -30,16 +30,16 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
           </h1>
         </motion.div>
 
-        {/* Bento Grid - Asymmetric Layout */}
-        <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Grid - Website full width top, two cards side by side bottom */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           
-          {/* Website Project - Featured Large Card */}
+          {/* Website Project - Full Width Featured Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ y: -8, transition: cardSpring }}
-            className="lg:col-span-2 lg:row-span-2 glass-card rounded-3xl p-10 flex flex-col relative overflow-hidden group"
+            className="md:col-span-2 glass-card rounded-3xl p-10 relative overflow-hidden group"
           >
             {/* Decorative glow */}
             <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/8 rounded-full blur-3xl group-hover:bg-primary/15 transition-colors duration-700" />

@@ -1,5 +1,6 @@
 import { Hero } from '@/components/Hero';
 import { Credibility } from '@/components/Credibility';
+import { SpeedCalculator } from '@/components/SpeedCalculator';
 import { ServicesTeaser } from '@/components/ServicesTeaser';
 import { Language } from '@/lib/translations';
 
@@ -14,6 +15,9 @@ const HomePage = ({ language }: HomePageProps) => {
       
       {/* Credibility Section */}
       <Credibility language={language} />
+
+      {/* Speed ROI Calculator */}
+      <SpeedCalculator language={language} />
 
       {/* Services Teaser */}
       <ServicesTeaser language={language} />
