@@ -5,73 +5,77 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 15% 15%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover-foreground: 220 20% 10%;
 
-    --primary: 28 89% 63%;
+    --primary: 28 89% 55%;
     --primary-foreground: 0 0% 100%;
-    
-    /* Credibility section background */
-    --credibility: 28 100% 97%;
+
+    --credibility: 30 50% 98%;
     --credibility-foreground: 28 100% 35%;
 
     --secondary: 220 14% 96%;
-    --secondary-foreground: 220 15% 15%;
+    --secondary-foreground: 220 20% 10%;
 
     --muted: 220 14% 96%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 28 100% 95%;
-    --accent-foreground: 28 100% 40%;
+    --accent: 28 100% 96%;
+    --accent-foreground: 28 100% 35%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 28 100% 63%;
+    --ring: 28 100% 55%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(28 100% 63% / 0.1) 0%, hsl(28 100% 63% / 0.05) 100%);
-    --card-shadow: 0 4px 24px -4px hsl(220 15% 15% / 0.08);
-    --card-shadow-hover: 0 12px 32px -8px hsl(28 100% 63% / 0.2);
+    /* Glass tokens */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.5;
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06);
+
+    /* Premium shadows */
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+    --card-shadow-hover: 0 20px 40px -12px rgba(237, 137, 54, 0.2);
+    --shadow-xl: 0 24px 48px -12px rgba(0, 0, 0, 0.12);
   }
 
   .dark {
-    --background: 220 15% 8%;
+    --background: 220 20% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 220 15% 12%;
+    --card: 220 20% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 15% 12%;
+    --popover: 220 20% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 28 100% 63%;
+    --primary: 28 89% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 18%;
+    --secondary: 220 20% 14%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 15% 18%;
+    --muted: 220 20% 14%;
     --muted-foreground: 220 10% 60%;
 
-    --accent: 28 100% 20%;
+    --accent: 28 100% 15%;
     --accent-foreground: 28 100% 80%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 28 100% 63%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 28 100% 55%;
   }
 }
 
@@ -85,8 +89,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 }
 
@@ -97,5 +101,29 @@
 
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-card {
+    background: hsl(0 0% 100% / 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(0 0% 100% / 0.4);
+    box-shadow: var(--card-shadow);
+  }
+
+  .mesh-gradient {
+    background:
+      radial-gradient(ellipse at 20% 50%, hsl(28 100% 55% / 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, hsl(28 100% 55% / 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, hsl(220 60% 60% / 0.03) 0%, transparent 50%),
+      hsl(var(--background));
   }
 }

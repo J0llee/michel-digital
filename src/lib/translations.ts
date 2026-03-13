@@ -30,8 +30,8 @@ export const translations = {
     title: { fi: 'Palvelut & Hinnoittelu', en: 'Services & Pricing' },
     readMore: { fi: 'Tutustu tarkemmin palveluihin', en: 'Read more about services' },
     website: {
-      title: { fi: 'Verkkosivuprojekti', en: 'Website Project' },
-      price: { fi: 'Alkaen 799€', en: 'From 799€' },
+      title: { fi: 'Verkkosivuprojekti', en: 'Custom Website' },
+      price: { fi: 'Ota yhteyttä', en: 'Contact Us' },
       keyPoint: { fi: 'Toimitus 1 viikossa', en: 'Delivery in 1 week' },
       description: {
         fi: 'Moderni, mobiilioptimoitu nettisivu yrityksellesi.',
@@ -46,10 +46,28 @@ export const translations = {
         en: ['Custom design', 'Mobile optimization', 'Basic SEO setup', 'Fast delivery'],
       },
     },
+    modifications: {
+      title: { fi: 'Muutostyöt ja päivitykset', en: 'Modifications & Updates' },
+      price: { fi: '60€', en: '60€' },
+      period: { fi: '/ h', en: '/ h' },
+      keyPoint: { fi: 'Tuntiveloitus', en: 'Hourly rate' },
+      description: {
+        fi: 'Joustavaa ja nopeaa apua sivustosi kehittämiseen.',
+        en: 'Flexible and fast help for your website.',
+      },
+      detailedDescription: {
+        fi: 'Joustavaa ja nopeaa apua sivustosi kehittämiseen, muokkaamiseen ja päivittämiseen asiantuntijalta tuntiveloituksella.',
+        en: 'Flexible and fast help for developing, editing, and updating your website by an expert, billed hourly.',
+      },
+      features: {
+        fi: ['Sisältöpäivitykset', 'Uudet ominaisuudet', 'Visuaaliset muutokset', 'Nopea palvelu'],
+        en: ['Content updates', 'New features', 'Visual changes', 'Fast service'],
+      },
+    },
     maintenance: {
       title: { fi: 'Kasvu & Ylläpito', en: 'Growth & Maintenance' },
-      price: { fi: 'Alkaen 45€', en: 'Starting at 45€' },
-      period: { fi: '/ kk (min. 3 kk)', en: '/ month (min. 3 months)' },
+      price: { fi: 'Alkaen 75€', en: 'Starting at 75€' },
+      period: { fi: '/ kk', en: '/ mo' },
       keyPoint: { fi: 'Jatkuva optimointi & myynnin kasvu', en: 'Continuous Optimization & Sales Growth' },
       description: {
         fi: 'Hallinta, optimointi ja tilastollinen seuranta. Pidämme sivusi iskussa.',
