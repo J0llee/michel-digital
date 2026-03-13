@@ -45,32 +45,46 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
             <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/8 rounded-full blur-3xl group-hover:bg-primary/15 transition-colors duration-700" />
             <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
             
-            <div className="relative z-10 flex-1 flex flex-col">
-              <div className="flex items-start justify-between mb-8">
-                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
-                  <Sparkles className="w-7 h-7 text-primary" />
+            <div className="relative z-10 flex flex-col md:flex-row md:gap-12">
+              {/* Left: Text */}
+              <div className="flex-1 flex flex-col">
+                <div className="flex items-start justify-between mb-8">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
+                    <Sparkles className="w-7 h-7 text-primary" />
+                  </div>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
+                    <Clock className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-bold text-primary">
+                      {t.website.keyPoint[language]}
+                    </span>
+                  </div>
                 </div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
-                  <Clock className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-bold text-primary">
-                    {t.website.keyPoint[language]}
-                  </span>
+
+                <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6 tracking-tight">
+                  {t.website.title[language]}
+                </h2>
+
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  {t.website.detailedDescription[language]}
+                </p>
+
+                <div className="mt-auto">
+                  <Link
+                    to="/about"
+                    className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:shadow-card-hover transition-all duration-300"
+                  >
+                    {t.website.price[language]}
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
+                  </Link>
                 </div>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6 tracking-tight">
-                {t.website.title[language]}
-              </h2>
-
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
-                {t.website.detailedDescription[language]}
-              </p>
-
-              <div className="border-t border-border/50 pt-8 mb-8">
+              {/* Right: Features */}
+              <div className="flex-1 mt-8 md:mt-0 md:border-l md:border-border/50 md:pl-12 flex flex-col justify-center">
                 <h3 className="font-bold text-foreground mb-5 text-sm uppercase tracking-wider">
                   {language === 'fi' ? 'Sisältää' : 'Includes'}
                 </h3>
-                <div className="grid sm:grid-cols-2 gap-3">
+                <div className="grid gap-3">
                   {t.website.features[language].map((feature, index) => (
                     <div key={index} className="flex items-center gap-3 text-foreground/80">
                       <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -80,16 +94,6 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              <div className="mt-auto">
-                <Link
-                  to="/about"
-                  className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:shadow-card-hover transition-all duration-300"
-                >
-                  {t.website.price[language]}
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
-                </Link>
               </div>
             </div>
           </motion.div>
