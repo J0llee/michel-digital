@@ -177,7 +177,7 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
               {t.maintenance.detailedDescription[language]}
             </p>
 
-            <div className="border-t border-border/50 pt-5">
+            <div className="border-t border-border/50 pt-5 mb-6">
               <ul className="space-y-2.5">
                 {t.maintenance.features[language].map((feature, index) => (
                   <li key={index} className="flex items-center gap-2.5 text-sm text-foreground/80">
@@ -186,6 +186,15 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div className="mt-auto">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold text-sm hover:shadow-card-hover transition-all duration-300 group/btn"
+              >
+                {t.website.price[language]}
+                <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5" />
+              </Link>
             </div>
           </motion.div>
         </div>
