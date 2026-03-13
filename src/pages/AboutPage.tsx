@@ -9,38 +9,28 @@ interface AboutPageProps {
   language: Language;
 }
 
+const cardSpring = {
+  type: 'spring' as const,
+  stiffness: 300,
+  damping: 20,
+};
+
 const AboutPage = ({ language }: AboutPageProps) => {
   const t = translations.about;
   const teamT = translations.team;
-
   const teamPhotos = [joelPhoto, valentinPhoto, walfordPhoto];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
   return (
-    <div className="pt-32 pb-24 min-h-screen">
+    <div className="pt-32 pb-24 min-h-screen mesh-gradient">
       <div className="container px-6">
         {/* Story Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-20 max-w-3xl mx-auto"
+          transition={{ duration: 0.6, type: 'spring', stiffness: 80 }}
+          className="text-center mb-24 max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-foreground mb-8 tracking-tighter">
             {t.title[language]}
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -53,74 +43,79 @@ const AboutPage = ({ language }: AboutPageProps) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tighter">
             {t.teamTitle[language]}
           </h2>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
-        >
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-28">
           {teamT.members.map((member, index) => (
             <motion.div
               key={member.name}
-              variants={cardVariants}
-              whileHover={{ scale: 1.03 }}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              whileHover={{ y: -8, transition: cardSpring }}
               className="group text-center"
             >
               <a
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative mb-6 mx-auto w-48 aspect-square overflow-hidden rounded-2xl block shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="relative mb-6 mx-auto w-52 aspect-square overflow-hidden rounded-3xl block shadow-xl hover:shadow-card-hover transition-all duration-500"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                  <Linkedin className="w-10 h-10 text-background" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                <div className="absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 z-20">
+                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full">
+                    <Linkedin className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-bold text-foreground">LinkedIn</span>
+                  </div>
                 </div>
                 <img
                   src={teamPhotos[index]}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ objectPosition: index === 0 ? 'center 15%' : 'center 15%' }}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  style={{ objectPosition: 'center 15%' }}
                 />
               </a>
-              <h3 className="text-xl font-bold text-foreground mb-1">
+              <h3 className="text-xl font-extrabold text-foreground mb-1 tracking-tight">
                 {member.name}
               </h3>
-              <p className="text-muted-foreground">{member.role[language]}</p>
+              <p className="text-muted-foreground font-medium">{member.role[language]}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Contact Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mt-24 max-w-4xl mx-auto"
+          transition={{ duration: 0.6, type: 'spring', stiffness: 80 }}
+          className="max-w-4xl mx-auto"
         >
-          <div className="bg-accent/30 rounded-2xl p-8 md:p-12 border border-border">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+          <div className="glass-card rounded-3xl p-10 md:p-14 relative overflow-hidden">
+            {/* Subtle accent */}
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+            
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-10 text-center tracking-tight">
               {t.contact.title[language]}
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="grid md:grid-cols-2 gap-10 items-start">
               {/* Contact Details */}
               <div className="space-y-6">
-                <div className="flex items-start gap-3 text-lg">
-                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-4 text-lg">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
                   <div>
-                    <span className="text-foreground font-medium block">
+                    <span className="text-foreground font-bold block">
                       {t.contact.company}
                     </span>
-                    <span className="text-muted-foreground">
+                    <span className="text-muted-foreground text-base">
                       {t.contact.address}
                     </span>
                   </div>
@@ -128,23 +123,27 @@ const AboutPage = ({ language }: AboutPageProps) => {
 
                 <a
                   href={`mailto:${t.contact.email}`}
-                  className="flex items-center gap-3 text-lg text-primary hover:underline transition-colors"
+                  className="flex items-center gap-4 text-lg group/link"
                 >
-                  <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span>{t.contact.email}</span>
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover/link:bg-primary/20 transition-colors">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-primary font-medium hover:underline">{t.contact.email}</span>
                 </a>
 
                 <a
                   href="tel:0451331813"
-                  className="flex items-center gap-3 text-lg text-primary hover:underline transition-colors"
+                  className="flex items-center gap-4 text-lg group/link"
                 >
-                  <Phone className="w-5 h-5 flex-shrink-0" />
-                  <span>{t.contact.phone[language]}</span>
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover/link:bg-primary/20 transition-colors">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-primary font-medium hover:underline">{t.contact.phone[language]}</span>
                 </a>
               </div>
 
-              {/* Google Maps Embed */}
-              <div className="w-full h-64 rounded-xl overflow-hidden border border-border shadow-sm">
+              {/* Google Maps */}
+              <div className="w-full h-72 rounded-2xl overflow-hidden shadow-xl">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.8977897876!2d27.272854!3d61.6876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469a1e7c8f5e4b0f%3A0x0!2sPorrassalmenkatu%2011%2C%2050100%20Mikkeli!5e0!3m2!1sen!2sfi!4v1"
                   width="100%"

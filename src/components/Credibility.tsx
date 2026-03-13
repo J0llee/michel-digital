@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
 import { Language, translations } from '@/lib/translations';
 
 interface CredibilityProps {
@@ -10,25 +9,37 @@ export const Credibility = ({ language }: CredibilityProps) => {
   const t = translations.credibility;
 
   return (
-    <section className="py-16 bg-[hsl(var(--credibility))]">
+    <section className="py-24 mesh-gradient">
       <div className="container px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center"
+          transition={{ duration: 0.7, type: 'spring', stiffness: 80 }}
+          className="max-w-3xl mx-auto"
         >
-          <div className="relative">
-            <Quote className="w-12 h-12 text-primary/30 mx-auto mb-6" />
+          <div className="relative glass-card rounded-3xl p-10 md:p-14">
+            {/* Decorative accent line */}
+            <div className="absolute top-0 left-10 right-10 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
-            <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed mb-6">
+            {/* Large decorative quote mark */}
+            <div className="absolute -top-4 left-10">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <span className="text-primary font-bold text-lg">"</span>
+              </div>
+            </div>
+
+            <p className="text-xl md:text-2xl font-semibold text-foreground leading-relaxed mb-8 tracking-tight">
               {t.stat[language]}
             </p>
-            
-            <p className="text-sm text-muted-foreground">
-              {t.source[language]}: <span className="font-medium">{t.citation}</span>
-            </p>
+
+            <div className="flex items-center gap-3">
+              <div className="h-px flex-1 bg-border" />
+              <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
+                {t.source[language]} · {t.citation}
+              </p>
+              <div className="h-px flex-1 bg-border" />
+            </div>
           </div>
         </motion.div>
       </div>
