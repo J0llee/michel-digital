@@ -38,8 +38,8 @@ const ReferencesPage = ({ language }: ReferencesPageProps) => {
           </h1>
           <p className="text-muted-foreground text-lg max-w-lg mx-auto">
             {language === 'fi'
-              ? 'Töitämme, joihin olemme ylpeitä.'
-              : 'Work we are proud of.'}
+              ? 'Esimerkkejä työmme laadusta:'
+              : 'Examples of the quality of our work:'}
           </p>
         </motion.div>
 
