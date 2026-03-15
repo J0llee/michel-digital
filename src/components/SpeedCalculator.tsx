@@ -45,18 +45,31 @@ const labels = {
 };
 
 export const SpeedCalculator = ({ language }: SpeedCalculatorProps) => {
-  const [visitors, setVisitors] = useState(10000);
-  const [value, setValue] = useState(50);
-  const [conversion, setConversion] = useState(2);
+  const [visitors, setVisitors] = useState<number | string>(10000);
+  const [value, setValue] = useState<number | string>(50);
+  const [conversion, setConversion] = useState<number | string>(2);
   const [speed, setSpeed] = useState('2');
 
-  const konversioDecimal = conversion / 100;
+  const numVisitors = visitors === '' ? 0 : Number(visitors);
+  const numValue = value === '' ? 0 : Number(value);
+  const numConversion = conversion === '' ? 0 : Number(conversion);
+
+  const konversioDecimal = numConversion / 100;
   let multiplier = 0;
   if (speed === '2') multiplier = 0.32;
   if (speed === '3') multiplier = 0.90;
   if (speed === '4') multiplier = 1.23;
-  const currentRevenue = visitors * konversioDecimal * value;
+  const currentRevenue = numVisitors * konversioDecimal * numValue;
   const lostRevenue = Math.round(currentRevenue * multiplier);
+
+  const handleChange = (setter: (v: number | string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    if (raw === '') {
+      setter('');
+    } else {
+      setter(Number(raw));
+    }
+  };
 
   return (
     <section className="py-28 mesh-gradient">
@@ -83,35 +96,31 @@ export const SpeedCalculator = ({ language }: SpeedCalculatorProps) => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="max-w-2xl mx-auto glass-card rounded-3xl p-8 md:p-10 relative overflow-hidden"
         >
-          {/* Decorative glow */}
           <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/8 rounded-full blur-3xl" />
 
           <div className="relative z-10 grid sm:grid-cols-2 gap-5 mb-8">
-            {/* Visitors */}
             <div className="space-y-2">
               <Label className="text-sm font-bold text-foreground">{labels.visitors[language]}</Label>
               <Input
                 type="number"
                 min={0}
                 value={visitors}
-                onChange={(e) => setVisitors(Number(e.target.value) || 0)}
+                onChange={handleChange(setVisitors)}
                 className="glass rounded-xl border-border/40 bg-background/50 focus:bg-background/80 transition-colors"
               />
             </div>
 
-            {/* Value */}
             <div className="space-y-2">
               <Label className="text-sm font-bold text-foreground">{labels.value[language]}</Label>
               <Input
                 type="number"
                 min={0}
                 value={value}
-                onChange={(e) => setValue(Number(e.target.value) || 0)}
+                onChange={handleChange(setValue)}
                 className="glass rounded-xl border-border/40 bg-background/50 focus:bg-background/80 transition-colors"
               />
             </div>
 
-            {/* Conversion */}
             <div className="space-y-2">
               <Label className="text-sm font-bold text-foreground">{labels.conversion[language]}</Label>
               <Input
@@ -120,12 +129,11 @@ export const SpeedCalculator = ({ language }: SpeedCalculatorProps) => {
                 max={100}
                 step={0.1}
                 value={conversion}
-                onChange={(e) => setConversion(Number(e.target.value) || 0)}
+                onChange={handleChange(setConversion)}
                 className="glass rounded-xl border-border/40 bg-background/50 focus:bg-background/80 transition-colors"
               />
             </div>
 
-            {/* Speed */}
             <div className="space-y-2">
               <Label className="text-sm font-bold text-foreground">{labels.speed[language]}</Label>
               <Select value={speed} onValueChange={setSpeed}>
@@ -143,7 +151,6 @@ export const SpeedCalculator = ({ language }: SpeedCalculatorProps) => {
             </div>
           </div>
 
-          {/* Result */}
           <motion.div
             key={lostRevenue}
             initial={{ scale: 0.97, opacity: 0.7 }}
