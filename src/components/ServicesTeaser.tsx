@@ -32,7 +32,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
         </motion.div>
 
         {/* Bento Grid - 3 cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {/* Website - Primary / Featured */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
