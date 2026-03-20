@@ -62,11 +62,11 @@ export const Footer = ({ language }: FooterProps) => {
         </motion.div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-background/40 text-sm">
+        <div className="pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-neutral-500 text-sm">
             © {currentYear} Michel Media. {t.rights[language]}
           </p>
-          <p className="text-background/40 text-sm flex items-center gap-1">
+          <p className="text-neutral-500 text-sm flex items-center gap-1">
             {t.madeWith[language]}{' '}
             <Heart className="w-3.5 h-3.5 text-primary" />{' '}
             {t.inMikkeli[language]}

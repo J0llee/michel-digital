@@ -127,7 +127,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             whileHover={{ y: -6, transition: cardSpring }}
-            className="glass-card rounded-3xl p-7 flex flex-col group"
+            className="glass-card rounded-3xl p-7 flex flex-col group h-full"
           >
             <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
               <Wrench className="w-5 h-5 text-primary" />
