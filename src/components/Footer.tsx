@@ -35,10 +35,10 @@ export const Footer = ({ language }: FooterProps) => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold mb-4 text-sm uppercase tracking-wider text-background/50">
+            <h4 className="font-bold mb-4 text-sm uppercase tracking-wider text-neutral-500">
               {t.contact[language]}
             </h4>
-            <div className="space-y-3 text-background/60">
+            <div className="space-y-3 text-neutral-400">
               <a
                 className="flex items-center gap-3 hover:text-primary transition-colors"
                 href="mailto:info@michelmedia.fi"
