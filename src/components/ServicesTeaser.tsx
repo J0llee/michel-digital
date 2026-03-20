@@ -40,7 +40,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             whileHover={{ y: -6, transition: cardSpring }}
-            className="md:col-span-2 lg:col-span-1 lg:row-span-2 glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group h-full"
+            className="md:col-span-2 lg:col-span-1 glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group h-full"
           >
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors duration-500" />
             
