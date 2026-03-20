@@ -11,7 +11,7 @@ export const Footer = ({ language }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="bg-muted dark:bg-[#121212] text-foreground py-16">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

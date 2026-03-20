@@ -40,7 +40,6 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
             whileHover={{ y: -8, transition: cardSpring }}
             className="md:col-span-2 glass-card rounded-3xl p-10 relative overflow-hidden group"
           >
-            <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/8 rounded-full blur-3xl group-hover:bg-primary/15 transition-colors duration-700" />
             <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
             
             <div className="relative z-10 flex flex-col md:flex-row md:gap-12">
