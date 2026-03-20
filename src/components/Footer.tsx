@@ -54,7 +54,7 @@ export const Footer = ({ language }: FooterProps) => {
               </a>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
-                Mikkeli, Finland
+                Maaherrankatu 26, 50100 Mikkeli
               </div>
             </div>
           </div>

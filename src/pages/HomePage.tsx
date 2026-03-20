@@ -1,7 +1,9 @@
 import { Hero } from '@/components/Hero';
 import { Credibility } from '@/components/Credibility';
+import { ProcessTimeline } from '@/components/ProcessTimeline';
 import { SpeedCalculator } from '@/components/SpeedCalculator';
 import { ServicesTeaser } from '@/components/ServicesTeaser';
+import { FAQ } from '@/components/FAQ';
 import { Language } from '@/lib/translations';
 
 interface HomePageProps {
@@ -12,15 +14,11 @@ const HomePage = ({ language }: HomePageProps) => {
   return (
     <>
       <Hero language={language} />
-      
-      {/* Credibility Section */}
       <Credibility language={language} />
-
-      {/* Speed ROI Calculator */}
+      <ProcessTimeline language={language} />
       <SpeedCalculator language={language} />
-
-      {/* Services Teaser */}
       <ServicesTeaser language={language} />
+      <FAQ language={language} />
     </>
   );
 };

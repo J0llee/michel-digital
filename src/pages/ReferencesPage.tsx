@@ -12,7 +12,7 @@ const references = [
     title: 'Gasthaus Mikkeli',
     description: {
       fi: 'Moderni ja kutsuva verkkosivusto perinteikkäälle mikkeliläiselle majoituspalvelulle. Toteutettu nopealla toimitusajalla ja optimoitu sujuvaan asiakaskokemukseen.',
-      en: 'A modern and inviting website for a traditional local accommodation service. Delivered quickly and optimized for a seamless customer experience.',
+      en: 'A modern and inviting website for a traditional local accommodation service. Delivered with a fast turnaround and optimized for a seamless customer experience.',
     },
     image: gasthausImg,
     url: 'https://gasthausmikkeli.fi',
@@ -54,14 +54,12 @@ const ReferencesPage = ({ language }: ReferencesPageProps) => {
               whileHover={{ y: -4 }}
               className="glass-card rounded-3xl overflow-hidden relative group"
             >
-              {/* Decorative glow */}
               <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/8 rounded-full blur-3xl" />
 
               <div className="md:flex">
                 {/* Browser Mockup */}
                 <div className="md:w-3/5 p-5 pb-0 md:pb-5 md:pr-0">
                   <div className="rounded-2xl overflow-hidden border border-border/30 bg-muted/30">
-                    {/* Browser top bar */}
                     <div className="flex items-center gap-1.5 px-4 py-2.5 bg-muted/50 border-b border-border/20">
                       <div className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
@@ -70,7 +68,6 @@ const ReferencesPage = ({ language }: ReferencesPageProps) => {
                         gasthausmikkeli.fi
                       </span>
                     </div>
-                    {/* Image */}
                     <div className="overflow-hidden">
                       <motion.img
                         src={ref.image}

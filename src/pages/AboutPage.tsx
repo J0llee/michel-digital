@@ -3,7 +3,6 @@ import { Linkedin, MapPin, Mail, Phone } from 'lucide-react';
 import { Language, translations } from '@/lib/translations';
 import joelPhoto from '@/assets/team/joel-v2.jpg';
 import valentinPhoto from '@/assets/team/valentin.jpg';
-import walfordPhoto from '@/assets/team/walford.jpg';
 
 interface AboutPageProps {
   language: Language;
@@ -18,7 +17,7 @@ const cardSpring = {
 const AboutPage = ({ language }: AboutPageProps) => {
   const t = translations.about;
   const teamT = translations.team;
-  const teamPhotos = [joelPhoto, valentinPhoto, walfordPhoto];
+  const teamPhotos = [joelPhoto, valentinPhoto];
 
   return (
     <div className="pt-32 pb-24 min-h-screen mesh-gradient">
@@ -50,7 +49,7 @@ const AboutPage = ({ language }: AboutPageProps) => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-28">
+        <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-28">
           {teamT.members.map((member, index) => (
             <motion.div
               key={member.name}
@@ -64,7 +63,8 @@ const AboutPage = ({ language }: AboutPageProps) => {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative mb-6 mx-auto w-52 aspect-square overflow-hidden rounded-3xl block shadow-xl hover:shadow-card-hover transition-all duration-500"
+                className="relative mb-6 mx-auto w-52 overflow-hidden rounded-3xl block shadow-xl hover:shadow-card-hover transition-all duration-500"
+                style={{ aspectRatio: '4/5' }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 <div className="absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 z-20">
@@ -76,8 +76,10 @@ const AboutPage = ({ language }: AboutPageProps) => {
                 <img
                   src={teamPhotos[index]}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  style={{ objectPosition: 'center 15%' }}
+                  className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${
+                    member.name === 'Valentin Lehtola' ? 'object-top' : ''
+                  }`}
+                  style={member.name !== 'Valentin Lehtola' ? { objectPosition: 'center 15%' } : undefined}
                 />
               </a>
               <h3 className="text-xl font-extrabold text-foreground mb-1 tracking-tight">
@@ -97,7 +99,6 @@ const AboutPage = ({ language }: AboutPageProps) => {
           className="max-w-4xl mx-auto"
         >
           <div className="glass-card rounded-3xl p-10 md:p-14 relative overflow-hidden">
-            {/* Subtle accent */}
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
             
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-10 text-center tracking-tight">
@@ -143,12 +144,12 @@ const AboutPage = ({ language }: AboutPageProps) => {
               </div>
 
               {/* Google Maps */}
-              <div className="w-full h-72 rounded-2xl overflow-hidden shadow-xl">
+              <div className="w-full h-72 rounded-2xl overflow-hidden shadow-xl glass-card">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.8977897876!2d27.272854!3d61.6876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469a1e7c8f5e4b0f%3A0x0!2sPorrassalmenkatu%2011%2C%2050100%20Mikkeli!5e0!3m2!1sen!2sfi!4v1"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.5!2d27.2728!3d61.6876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469a1e7c8f5e4b0f%3A0x0!2sMaaherrankatu%2026%2C%2050100%20Mikkeli!5e0!3m2!1sen!2sfi!4v1"
                   width="100%"
                   height="100%"
-                  style={{ border: 0 }}
+                  style={{ border: 0, filter: 'grayscale(30%) contrast(1.05)' }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
