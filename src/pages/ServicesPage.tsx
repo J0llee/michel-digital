@@ -1,4 +1,4 @@
-import { Check, Sparkles, Wrench, PenTool, Clock, TrendingUp, Mail, ArrowRight } from 'lucide-react';
+import { Check, Sparkles, Wrench, PenTool, TrendingUp, Mail, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Language, translations } from '@/lib/translations';
