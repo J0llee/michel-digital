@@ -42,7 +42,6 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             whileHover={{ y: -6, transition: cardSpring }}
             className="md:col-span-2 lg:col-span-1 lg:row-span-2 glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group"
           >
-            {/* Accent glow */}
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors duration-500" />
             
             <div className="relative z-10 flex-1 flex flex-col">
@@ -80,7 +79,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             </div>
           </motion.div>
 
-          {/* Modifications - New */}
+          {/* Modifications */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -163,7 +162,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
           </motion.div>
         </div>
 
-        {/* Read More */}
+        {/* Inline text link */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +172,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
         >
           <Link
             to="/services"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:shadow-card-hover transition-all duration-300"
+            className="group inline-flex items-center gap-2 text-primary font-bold text-lg hover:underline"
           >
             {t.readMore[language]}
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

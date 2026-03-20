@@ -4,6 +4,7 @@ import { Globe, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import { Logo } from '@/components/Logo';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface NavbarProps {
   language: Language;
@@ -72,6 +73,14 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
 
             <div className="w-px h-6 bg-border mx-2" />
 
+            <ThemeToggle
+              className={
+                scrolled || location.pathname !== '/'
+                  ? 'text-foreground hover:bg-foreground/5'
+                  : 'text-primary-foreground hover:bg-primary-foreground/10'
+              }
+            />
+
             <button
               onClick={toggleLanguage}
               className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
@@ -86,7 +95,8 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
           </div>
 
           {/* Mobile */}
-          <div className="flex md:hidden items-center gap-3">
+          <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle className="text-foreground" />
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 px-3 py-2 rounded-full bg-foreground/5 text-sm font-semibold"

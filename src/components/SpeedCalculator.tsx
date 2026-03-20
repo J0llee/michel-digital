@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Gauge, ArrowRight } from 'lucide-react';
+import { Gauge, ArrowRight, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Language } from '@/lib/translations';
+import { Language, translations } from '@/lib/translations';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
@@ -168,7 +168,7 @@ export const SpeedCalculator = ({ language }: SpeedCalculatorProps) => {
                 </div>
                 <p className="text-foreground text-lg">
                   {labels.resultPrefix[language]}{' '}
-                  <span className="text-3xl md:text-4xl font-extrabold text-primary">
+                  <span className="text-4xl md:text-5xl font-extrabold text-primary">
                     {lostRevenue.toLocaleString('fi-FI')} €
                   </span>{' '}
                   {labels.resultSuffix[language]}
@@ -189,6 +189,24 @@ export const SpeedCalculator = ({ language }: SpeedCalculatorProps) => {
               </p>
             )}
           </motion.div>
+        </motion.div>
+
+        {/* Fact Box */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="max-w-2xl mx-auto mt-8"
+        >
+          <div className="glass-card rounded-2xl p-6 flex items-start gap-4">
+            <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <Info className="w-4 h-4 text-primary" />
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {translations.speedCalc.factBox[language]}
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

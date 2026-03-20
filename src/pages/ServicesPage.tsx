@@ -30,10 +30,9 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
           </h1>
         </motion.div>
 
-        {/* Grid - Website full width top, two cards side by side bottom */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           
-          {/* Website Project - Full Width Featured Card */}
+          {/* Website Project - Full Width */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,12 +40,10 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
             whileHover={{ y: -8, transition: cardSpring }}
             className="md:col-span-2 glass-card rounded-3xl p-10 relative overflow-hidden group"
           >
-            {/* Decorative glow */}
             <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/8 rounded-full blur-3xl group-hover:bg-primary/15 transition-colors duration-700" />
             <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
             
             <div className="relative z-10 flex flex-col md:flex-row md:gap-12">
-              {/* Left: Text */}
               <div className="flex-1 flex flex-col">
                 <div className="flex items-start justify-between mb-8">
                   <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
@@ -79,7 +76,6 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
                 </div>
               </div>
 
-              {/* Right: Features */}
               <div className="flex-1 mt-8 md:mt-0 md:border-l md:border-border/50 md:pl-12 flex flex-col justify-center">
                 <h3 className="font-bold text-foreground mb-5 text-sm uppercase tracking-wider">
                   {language === 'fi' ? 'Sisältää' : 'Includes'}
