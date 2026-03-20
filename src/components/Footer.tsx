@@ -26,7 +26,7 @@ export const Footer = ({ language }: FooterProps) => {
             <h3 className="text-2xl font-extrabold mb-4 tracking-tight">
               Michel <span className="text-primary">Media</span>
             </h3>
-            <p className="text-background/60 max-w-sm leading-relaxed">
+            <p className="text-neutral-400 max-w-sm leading-relaxed">
               {language === 'fi'
                 ? 'Moderneja verkkosivuja paikallisella otteella.'
                 : 'Modern websites with a local touch.'}
