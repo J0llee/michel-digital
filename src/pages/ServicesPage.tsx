@@ -1,4 +1,4 @@
-import { Check, Sparkles, Wrench, PenTool, Clock, TrendingUp, Mail, ArrowRight } from 'lucide-react';
+import { Check, Sparkles, Wrench, PenTool, TrendingUp, Mail, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Language, translations } from '@/lib/translations';
@@ -45,15 +45,9 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
             
             <div className="relative z-10 flex flex-col md:flex-row md:gap-12">
               <div className="flex-1 flex flex-col">
-                <div className="flex items-start justify-between mb-8">
+                <div className="mb-8">
                   <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
                     <Sparkles className="w-7 h-7 text-primary" />
-                  </div>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-bold text-primary">
-                      {t.website.keyPoint[language]}
-                    </span>
                   </div>
                 </div>
 

@@ -32,7 +32,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
         </motion.div>
 
         {/* Bento Grid - 3 cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto items-stretch">
           {/* Website - Primary / Featured */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -40,7 +40,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             whileHover={{ y: -6, transition: cardSpring }}
-            className="md:col-span-2 lg:col-span-1 lg:row-span-2 glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group"
+            className="md:col-span-2 lg:col-span-1 lg:row-span-2 glass-card rounded-3xl p-8 flex flex-col relative overflow-hidden group h-full"
           >
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors duration-500" />
             
@@ -86,7 +86,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ y: -6, transition: cardSpring }}
-            className="glass-card rounded-3xl p-7 flex flex-col group"
+            className="glass-card rounded-3xl p-7 flex flex-col group h-full"
           >
             <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
               <PenTool className="w-5 h-5 text-primary" />
@@ -127,7 +127,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             whileHover={{ y: -6, transition: cardSpring }}
-            className="glass-card rounded-3xl p-7 flex flex-col group"
+            className="glass-card rounded-3xl p-7 flex flex-col group h-full"
           >
             <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
               <Wrench className="w-5 h-5 text-primary" />
