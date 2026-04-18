@@ -175,7 +175,7 @@ export const translations = {
         en: "We're here to help – feel free to reach out.",
       },
       company: 'Michel Media',
-      address: 'Maaherrankatu 26 A18, 50100 Mikkeli',
+      address: 'Maaherrankatu 26,\n50100 Mikkeli',
       location: 'Mikkeli, Finland',
       email: 'info@michelmedia.fi',
       phone: { fi: '0451331813', en: '0451331813' },
