@@ -69,7 +69,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
               </ul>
               <div className="mt-auto">
                 <Link
-                  to="/about"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold text-sm hover:shadow-card-hover transition-all duration-300 group/btn"
                 >
                   {t.website.price[language]}
@@ -111,7 +111,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             </ul>
             <div className="mt-auto">
               <Link
-                to="/about"
+                to="/contact"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full font-bold text-sm hover:shadow-card-hover transition-all duration-300 group/btn"
               >
                 {t.website.price[language]}
@@ -152,7 +152,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
             </ul>
             <div className="mt-auto">
               <Link
-                to="/about"
+                to="/contact"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full font-bold text-sm hover:shadow-card-hover transition-all duration-300 group/btn"
               >
                 {t.website.price[language]}

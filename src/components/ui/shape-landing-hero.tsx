@@ -205,7 +205,7 @@ function HeroGeometric({
               className="inline-block"
             >
               <Link
-                to="/contact#kontakt"
+                to="/contact"
                 className={cn(
                   "inline-flex items-center gap-2 px-8 py-4 rounded-full",
                   "bg-orange-500 text-white font-semibold text-base",

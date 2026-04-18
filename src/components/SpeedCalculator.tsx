@@ -174,7 +174,7 @@ export const SpeedCalculator = ({ language }: SpeedCalculatorProps) => {
                   {labels.resultSuffix[language]}
                 </p>
                 <Link
-                  to="/about"
+                  to="/contact"
                   className="mt-5 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold text-sm hover:shadow-card-hover transition-all duration-300 group"
                 >
                   {labels.cta[language]}
