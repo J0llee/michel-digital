@@ -97,7 +97,7 @@ export const Hero = ({ language }: HeroProps) => {
             transition={{ duration: 0.6, delay: 0.8, type: 'spring', stiffness: 120 }}
           >
             <Link
-              to="/about"
+              to="/contact"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:shadow-card-hover transition-all duration-300 shadow-xl"
             >
               {t.cta[language]}
