@@ -60,7 +60,7 @@ const ContactPage = ({ language }: ContactPageProps) => {
                 <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
                   {card.label}
                 </p>
-                <p className="text-foreground font-bold text-lg leading-snug break-words">
+                <p className="text-foreground font-bold text-lg leading-snug break-words whitespace-pre-line">
                   {card.value}
                 </p>
               </div>
