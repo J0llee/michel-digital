@@ -59,7 +59,7 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
 
                 <div className="mt-auto">
                   <Link
-                    to="/about"
+                    to="/contact"
                     className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:shadow-card-hover transition-all duration-300"
                   >
                     {t.website.price[language]}
@@ -124,7 +124,7 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
             </div>
             <div className="mt-auto">
               <Link
-                to="/about"
+                to="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold text-sm hover:shadow-card-hover transition-all duration-300 group/btn"
               >
                 {t.website.price[language]}
@@ -177,7 +177,7 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
             </div>
             <div className="mt-auto">
               <Link
-                to="/about"
+                to="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold text-sm hover:shadow-card-hover transition-all duration-300 group/btn"
               >
                 {t.website.price[language]}
@@ -215,7 +215,7 @@ const ServicesPage = ({ language }: ServicesPageProps) => {
               {t.cta.teamLabel[language]}
             </p>
 
-            <Link to="/about" className="inline-flex items-center gap-2 text-primary font-bold hover:underline group">
+            <Link to="/contact" className="inline-flex items-center gap-2 text-primary font-bold hover:underline group">
               {t.cta.teamLink[language]}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
