@@ -12,14 +12,14 @@ interface HomePageProps {
 
 const HomePage = ({ language }: HomePageProps) => {
   return (
-    <>
+    <div className="bg-background mesh-gradient">
       <Hero language={language} />
       <Credibility language={language} />
       <ProcessTimeline language={language} />
       <SpeedCalculator language={language} />
       <ServicesTeaser language={language} />
       <FAQ language={language} />
-    </>
+    </div>
   );
 };
 

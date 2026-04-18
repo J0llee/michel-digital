@@ -6,6 +6,7 @@ export const translations = {
     services: { fi: 'Palvelut', en: 'Services' },
     references: { fi: 'Referenssit', en: 'References' },
     about: { fi: 'Meistä', en: 'About Us' },
+    contact: { fi: 'Yhteystiedot', en: 'Contact' },
   },
   hero: {
     headline: {
@@ -13,8 +14,8 @@ export const translations = {
       en: 'Modern Digital Excellence – Websites that scale your business.',
     },
     subtext: {
-      fi: 'Mikkeliläistä digiosaamista - Modernit verkkosivut paikallisella otteella. Tämä verkkosivu on 100% meidän itsemme suunnittelema ja toteuttama käyttäen uusimpia työkaluja ja teknologioita.',
-      en: "This website was 100% designed and built by us using the latest tools and technology. We are currently building our portfolio – join our growth story.",
+      fi: 'Huipputason digiosaamista – modernit verkkosivut ammattimaisella otteella. Tämä verkkosivu on 100% meidän itsemme suunnittelema ja toteuttama käyttäen uusimpia työkaluja ja teknologioita.',
+      en: 'Top-tier digital expertise – modern websites built with a professional touch. This website was 100% designed and built by us using the latest tools and technology.',
     },
     cta: { fi: 'Ota yhteyttä', en: 'Contact Us' },
   },
@@ -124,7 +125,7 @@ export const translations = {
       },
       {
         q: { fi: 'Miksi valita teidät eikä isoa mainostoimistoa?', en: 'Why choose you over a large agency?' },
-        a: { fi: 'Olemme päätoimisia Aalto-yliopiston opiskelijoita, ja nuori ikämme on yksi suurimmista valttikorteistamme. Opintojemme ansiosta elämme ja hengitämme alan kehitystä, joten saat sivuillesi aina markkinoiden tuoreimmat ja tehokkaimmat teknologiat. Koska emme pyöritä ison toimiston raskasta koneistoa emmekä tavoittele sokeasti voittojen maksimointia, pystymme tarjoamaan ensiluokkaista laatua erittäin kilpailukykyiseen hintaan. Kanssamme et maksa byrokratiasta, vaan panostamme kaiken aikamme ja resurssimme täydellisen asiakaskokemuksen rakentamiseen – aidosti välittäen ja täysin ilman välikäsiä.', en: 'We are full-time Aalto University students, and our youth is one of our greatest assets. Thanks to our studies, we live and breathe industry developments, ensuring your site always features the latest and most effective technologies. Since we don\'t run a large agency\'s heavy machinery and aren\'t blindly chasing profit maximization, we can offer first-class quality at a highly competitive price. With us, you don\'t pay for bureaucracy – we invest all our time and resources into building the perfect customer experience, with genuine care and absolutely no middlemen.' },
+        a: { fi: 'Tarjoamme huipputason digiosaamista ilman ison toimiston raskasta byrokratiaa. Käytämme aina markkinoiden tuoreimpia ja tehokkaimpia teknologioita, ja koska kustannusrakenteemme on kevyt, pystymme tarjoamaan ensiluokkaista laatua erittäin kilpailukykyiseen hintaan. Kanssamme et maksa välikäsistä – panostamme kaiken aikamme ja resurssimme täydellisen asiakaskokemuksen rakentamiseen aidosti välittäen.', en: "We offer top-tier digital expertise without the heavy bureaucracy of a large agency. We always use the latest and most effective technologies on the market, and because our cost structure is lean, we can deliver first-class quality at a highly competitive price. With us, you don't pay for middlemen – we invest all our time and resources into building the perfect customer experience with genuine care." },
       },
       {
         q: { fi: 'Mitä "ilmaiset demosivut" käytännössä tarkoittaa?', en: 'What does "free demo site" mean in practice?' },
@@ -147,14 +148,18 @@ export const translations = {
   about: {
     title: { fi: 'Meistä', en: 'About Us' },
     story: {
-      fi: 'Olemme päätoimisia Aalto-yliopiston opiskelijoita, ja nuori ikämme on suurin valttikorttimme. Opintojemme ansiosta elämme ja hengitämme alan kehitystä, joten saat sivuillesi aina markkinoiden tuoreimmat ja tehokkaimmat teknologiat. Koska emme pyöritä ison toimiston raskasta koneistoa emmekä tavoittele sokeasti voittojen maksimointia, pystymme tarjoamaan ensiluokkaista laatua erittäin kilpailukykyiseen hintaan. Kanssamme et maksa byrokratiasta, vaan panostamme kaiken aikamme ja resurssimme täydellisen asiakaskokemuksen rakentamiseen – aidosti välittäen ja täysin ilman välikäsiä.',
-      en: 'We are full-time Aalto University students, and our youth is our greatest asset. Thanks to our studies, we live and breathe industry trends, ensuring your site always features the latest and most effective technologies on the market. Because we don\'t run a large agency\'s heavy machinery and aren\'t blindly chasing profit maximization, we can offer first-class quality at a highly competitive price. With us, you\'re not paying for bureaucracy – we invest all our time and resources into building the perfect customer experience, with genuine care and absolutely no middlemen.',
+      fi: 'Tarjoamme huipputason digiosaamista ammattimaisella ja henkilökohtaisella otteella. Käytämme markkinoiden tuoreimpia ja tehokkaimpia teknologioita, ja koska kustannusrakenteemme on kevyt, pystymme tarjoamaan ensiluokkaista laatua erittäin kilpailukykyiseen hintaan. Kanssamme et maksa byrokratiasta tai välikäsistä – panostamme kaiken aikamme täydellisen asiakaskokemuksen rakentamiseen.',
+      en: "We deliver top-tier digital expertise with a professional and personal touch. We use the latest and most effective technologies on the market, and because our cost structure is lean, we can offer first-class quality at a highly competitive price. With us, you don't pay for bureaucracy or middlemen – we invest all our time into building the perfect customer experience.",
     },
     teamTitle: { fi: 'Tiimi', en: 'The Team' },
     contact: {
       title: { fi: 'Yhteystiedot', en: 'Contact Us' },
+      subtitle: {
+        fi: 'Olemme tavoitettavissa – ota rohkeasti yhteyttä.',
+        en: "We're here to help – feel free to reach out.",
+      },
       company: 'Michel Media',
-      address: 'Maaherrankatu 26, 50100 Mikkeli',
+      address: 'Maaherrankatu 26 A18, 50100 Mikkeli',
       location: 'Mikkeli, Finland',
       email: 'info@michelmedia.fi',
       phone: { fi: '0451331813', en: '0451331813' },
@@ -163,8 +168,8 @@ export const translations = {
   team: {
     title: { fi: 'Tiimi', en: 'The Team' },
     intro: {
-      fi: 'Olemme Joel ja Valentin – kaksi nuorta, osaavaa opiskelijaa Mikkelistä.',
-      en: 'We are Joel and Valentin – two young, skilled students from Mikkeli.',
+      fi: 'Olemme Joel ja Valentin – kaksi nuorta, intohimoista kehittäjää.',
+      en: 'We are Joel and Valentin – two young, passionate developers.',
     },
     members: [
       { name: 'Joel Korte', role: { fi: 'Kehittäjä', en: 'Developer' }, linkedin: 'https://www.linkedin.com/in/joel-korte/' },
@@ -175,6 +180,89 @@ export const translations = {
     contact: { fi: 'Yhteystiedot', en: 'Contact' },
     rights: { fi: 'Kaikki oikeudet pidätetään.', en: 'All rights reserved.' },
     madeWith: { fi: 'Tehty', en: 'Made with' },
-    inMikkeli: { fi: 'Mikkelissä', en: 'in Mikkeli' },
+    inMikkeli: { fi: 'Suomessa', en: 'in Finland' },
+  },
+  chat: {
+    triggerLabel: { fi: 'Avaa keskustelu', en: 'Open chat' },
+    title: { fi: 'Pyydä tarjous', en: 'Request a Quote' },
+    subtitle: { fi: 'Vastaa muutamaan kysymykseen', en: 'Answer a few quick questions' },
+    back: { fi: 'Takaisin', en: 'Back' },
+    next: { fi: 'Seuraava', en: 'Next' },
+    submit: { fi: 'Lähetä', en: 'Submit' },
+    skip: { fi: 'Ohita', en: 'Skip' },
+    step: { fi: 'Vaihe', en: 'Step' },
+    of: { fi: '/', en: 'of' },
+    steps: [
+      {
+        question: {
+          fi: 'Millaista verkkosivuratkaisua etsitte?',
+          en: 'What kind of website solution are you looking for?',
+        },
+        options: [
+          { fi: 'Uudet sivut', en: 'New website' },
+          { fi: 'Sivustouudistus', en: 'Website redesign' },
+          { fi: 'Pienkehitys / Muutos', en: 'Small changes / updates' },
+          { fi: 'Verkkokauppa', en: 'E-commerce' },
+        ],
+      },
+      {
+        question: {
+          fi: 'Kuinka laaja projekti on kyseessä?',
+          en: 'How large is the project?',
+        },
+        options: [
+          { fi: 'Suppea (1-3 sivua)', en: 'Small (1-3 pages)' },
+          { fi: 'Keskikokoinen (4-10 sivua)', en: 'Medium (4-10 pages)' },
+          { fi: 'Laaja (yli 10 sivua)', en: 'Large (10+ pages)' },
+        ],
+      },
+      {
+        question: {
+          fi: 'Mikä on projektin tavoiteaikataulu?',
+          en: 'What is the target timeline?',
+        },
+        options: [
+          { fi: 'Mahdollisimman pian', en: 'As soon as possible' },
+          { fi: '1 kuukauden sisällä', en: 'Within 1 month' },
+          { fi: '2-3 kuukauden sisällä', en: 'Within 2-3 months' },
+          { fi: 'Ei kiirettä', en: 'No rush' },
+        ],
+      },
+      {
+        question: {
+          fi: 'Vapaamuotoiset lisätiedot (valinnainen):',
+          en: 'Additional details (optional):',
+        },
+        placeholder: {
+          fi: 'Kerro lisää projektistasi...',
+          en: 'Tell us more about your project...',
+        },
+      },
+    ],
+    successTitle: {
+      fi: 'Kiitos!',
+      en: 'Thank you!',
+    },
+    successText: {
+      fi: 'Sähköpostisovelluksesi pitäisi nyt aueta.',
+      en: 'Your email app should now be opening.',
+    },
+    fallbackText: {
+      fi: 'Eikö sähköpostisi auennut? Kopioi tästä yhteydenottopyyntösi ja lähetä se osoitteeseen info@michelmedia.fi:',
+      en: "Didn't your email open? Copy your request below and send it to info@michelmedia.fi:",
+    },
+    copy: { fi: 'Kopioi', en: 'Copy' },
+    copied: { fi: 'Kopioitu!', en: 'Copied!' },
+    close: { fi: 'Sulje', en: 'Close' },
+    emailLabels: {
+      solution: { fi: 'Ratkaisu', en: 'Solution' },
+      scope: { fi: 'Laajuus', en: 'Scope' },
+      timeline: { fi: 'Aikataulu', en: 'Timeline' },
+      details: { fi: 'Lisätiedot', en: 'Additional details' },
+      intro: {
+        fi: 'Hei! Haluaisin pyytää tarjouksen verkkosivuprojektista. Tässä tietoni:',
+        en: "Hi! I'd like to request a quote for a website project. Here are my details:",
+      },
+    },
   },
 } as const;

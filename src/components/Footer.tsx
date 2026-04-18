@@ -28,8 +28,8 @@ export const Footer = ({ language }: FooterProps) => {
             </h3>
             <p className="text-neutral-400 max-w-sm leading-relaxed">
               {language === 'fi'
-                ? 'Moderneja verkkosivuja paikallisella otteella.'
-                : 'Modern websites with a local touch.'}
+                ? 'Huipputason digiosaamista ammattimaisella otteella.'
+                : 'Top-tier digital expertise with a professional touch.'}
             </p>
           </div>
 

@@ -16,7 +16,7 @@ export const FAQ = ({ language }: FAQProps) => {
   const t = translations.faq;
 
   return (
-    <section className="py-28 mesh-gradient">
+    <section className="py-28 bg-transparent">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
