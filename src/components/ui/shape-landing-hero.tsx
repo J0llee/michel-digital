@@ -88,15 +88,8 @@ function HeroGeometric({
   };
 
   return (
-    <div
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#fcfcfc] dark:bg-[#030303]"
-      style={{
-        WebkitMaskImage:
-          "linear-gradient(to bottom, black 0%, black 85%, transparent 100%)",
-        maskImage:
-          "linear-gradient(to bottom, black 0%, black 85%, transparent 100%)",
-      }}
-    >
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-transparent">
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
