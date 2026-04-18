@@ -85,21 +85,17 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
 
           {/* Mobile */}
           <div className="flex md:hidden items-center gap-2">
-            <ThemeToggle className="text-foreground" />
+            <ThemeToggle className="text-slate-800 dark:text-slate-100" />
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-2 rounded-full bg-foreground/5 text-sm font-semibold"
+              className="flex items-center gap-2 px-3 py-2 rounded-full bg-foreground/5 text-sm font-semibold text-slate-800 dark:text-slate-100"
             >
               <Globe className="w-4 h-4 text-primary" />
               {language === 'fi' ? 'EN' : 'FI'}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-xl transition-colors ${
-                scrolled || location.pathname !== '/'
-                  ? 'text-foreground'
-                  : 'text-primary-foreground'
-              }`}
+              className="p-2 rounded-xl transition-colors text-slate-800 dark:text-slate-100"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
