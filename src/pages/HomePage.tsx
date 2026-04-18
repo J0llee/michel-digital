@@ -12,7 +12,7 @@ interface HomePageProps {
 
 const HomePage = ({ language }: HomePageProps) => {
   return (
-    <div className="bg-[#f8fafc] dark:bg-[#0a0a0a]">
+    <div className="bg-transparent">
       <HeroGeometric />
       <Credibility language={language} />
       <ProcessTimeline language={language} />
