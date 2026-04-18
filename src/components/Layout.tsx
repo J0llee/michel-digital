@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { GlobalBackground } from '@/components/GlobalBackground';
 import { Language } from '@/lib/translations';
 
 interface LayoutProps {
@@ -12,7 +13,7 @@ interface LayoutProps {
 export const Layout = ({ children, language, onLanguageChange }: LayoutProps) => {
   return (
     <main className="relative min-h-screen bg-background">
-      <div className="ambient-glow" aria-hidden="true" />
+      <GlobalBackground />
       <div className="relative z-10">
         <Navbar language={language} onLanguageChange={onLanguageChange} />
         {children}
