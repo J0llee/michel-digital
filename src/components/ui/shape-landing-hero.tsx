@@ -88,18 +88,26 @@ function HeroGeometric({
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#f8fafc] dark:bg-[#0a0a0a]">
+    <div
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#fcfcfc] dark:bg-[#030303]"
+      style={{
+        WebkitMaskImage:
+          "linear-gradient(to bottom, black 0%, black 85%, transparent 100%)",
+        maskImage:
+          "linear-gradient(to bottom, black 0%, black 85%, transparent 100%)",
+      }}
+    >
       {/* Ambient orange glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 blur-3xl" />
 
-      {/* Floating elegant shapes - more saturated in light mode */}
+      {/* Floating elegant shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <ElegantShape
           delay={0.3}
           width={600}
           height={140}
           rotate={12}
-          gradient="from-orange-600/25 dark:from-orange-500/20"
+          gradient="from-orange-500/20 dark:from-orange-500/20"
           className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
         />
         <ElegantShape
@@ -107,7 +115,7 @@ function HeroGeometric({
           width={500}
           height={120}
           rotate={-15}
-          gradient="from-orange-600/20 dark:from-orange-500/15"
+          gradient="from-orange-500/20 dark:from-orange-500/15"
           className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
         />
         <ElegantShape
@@ -131,7 +139,7 @@ function HeroGeometric({
           width={150}
           height={40}
           rotate={-25}
-          gradient="from-orange-600/25 dark:from-orange-500/20"
+          gradient="from-orange-500/25 dark:from-orange-500/20"
           className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
         />
       </div>
@@ -139,7 +147,6 @@ function HeroGeometric({
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
-
           {/* Title */}
           <motion.div
             custom={1}
@@ -170,7 +177,7 @@ function HeroGeometric({
             initial="hidden"
             animate="visible"
           >
-            <p className="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-100 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-slate-800 dark:text-slate-100 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
               {paragraph}
             </p>
           </motion.div>
@@ -189,7 +196,7 @@ function HeroGeometric({
               className="inline-block"
             >
               <Link
-                to="/contact"
+                to="/contact#kontakt"
                 className={cn(
                   "inline-flex items-center gap-2 px-8 py-4 rounded-full",
                   "bg-orange-500 text-white font-semibold text-base",
@@ -205,9 +212,6 @@ function HeroGeometric({
           </motion.div>
         </div>
       </div>
-
-      {/* Bottom blend fade — theme-conditional, erases section seam */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#f8fafc] dark:to-[#0a0a0a] pointer-events-none z-20" />
     </div>
   );
 }
