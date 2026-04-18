@@ -12,7 +12,7 @@ interface HomePageProps {
 
 const HomePage = ({ language }: HomePageProps) => {
   return (
-    <div className="bg-background mesh-gradient">
+    <div className="bg-[#f8fafc] dark:bg-[#0a0a0a]">
       <HeroGeometric />
       <Credibility language={language} />
       <ProcessTimeline language={language} />
