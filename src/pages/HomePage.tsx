@@ -1,4 +1,4 @@
-import { Hero } from '@/components/Hero';
+import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import { Credibility } from '@/components/Credibility';
 import { ProcessTimeline } from '@/components/ProcessTimeline';
 import { SpeedCalculator } from '@/components/SpeedCalculator';
