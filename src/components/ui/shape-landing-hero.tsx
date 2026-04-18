@@ -165,7 +165,7 @@ function HeroGeometric({
           >
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 md:mb-8 tracking-tighter leading-[1.05]">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/80">
-                {title1}
+                {resolvedTitle1}
               </span>
               <br />
               <span
@@ -174,7 +174,7 @@ function HeroGeometric({
                   "bg-gradient-to-r from-primary via-primary to-primary/70"
                 )}
               >
-                {title2}
+                {resolvedTitle2}
               </span>
             </h1>
           </motion.div>
@@ -187,7 +187,7 @@ function HeroGeometric({
             animate="visible"
           >
             <p className="text-base sm:text-lg md:text-xl text-slate-800 dark:text-slate-100 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4 whitespace-pre-line">
-              {paragraph}
+              {resolvedParagraph}
             </p>
           </motion.div>
 
@@ -214,7 +214,7 @@ function HeroGeometric({
                   "transition-colors duration-300"
                 )}
               >
-                {ctaLabel}
+                {resolvedCtaLabel}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
