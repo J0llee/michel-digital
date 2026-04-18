@@ -28,6 +28,7 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
     { href: '/services', label: t.services[language] },
     { href: '/references', label: t.references[language] },
     { href: '/about', label: t.about[language] },
+    { href: '/contact', label: t.contact[language] },
   ];
 
   const toggleLanguage = () => {
