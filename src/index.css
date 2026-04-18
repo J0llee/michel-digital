@@ -145,4 +145,27 @@
       radial-gradient(ellipse at 50% 80%, hsl(28 80% 35% / 0.06) 0%, transparent 50%),
       hsl(var(--background));
   }
+
+  /* Site-wide ambient orange mist glow — persists behind all sections */
+  .ambient-glow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 30%, hsl(28 100% 55% / 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 80% 70%, hsl(28 100% 55% / 0.06) 0%, transparent 60%);
+    animation: ambient-pulse 8s ease-in-out infinite;
+  }
+
+  .dark .ambient-glow {
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 30%, hsl(28 100% 50% / 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 80% 70%, hsl(28 100% 50% / 0.10) 0%, transparent 60%);
+  }
+
+  @keyframes ambient-pulse {
+    0%, 100% { opacity: 0.85; }
+    50% { opacity: 1; }
+  }
 }
