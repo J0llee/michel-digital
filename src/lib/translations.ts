@@ -18,6 +18,12 @@ export const translations = {
       en: 'Top-tier digital expertise – modern websites built with a professional touch. This website was 100% designed and built by us using the latest tools and technology.',
     },
     cta: { fi: 'Ota yhteyttä', en: 'Contact Us' },
+    title1: { fi: 'Verkkosivut, jotka', en: 'Websites that' },
+    title2: { fi: 'skaalaavat liiketoimintaasi.', en: 'scale your business.' },
+    paragraph: {
+      fi: 'Suomalaista digiosaamista\nModernit verkkosivut ja yksilöllinen palvelu.',
+      en: 'Finnish digital expertise\nModern websites and personalized service.',
+    },
   },
   process: {
     title: { fi: 'Kuinka toimimme', en: 'Our Process' },
