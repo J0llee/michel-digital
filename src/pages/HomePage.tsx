@@ -1,4 +1,4 @@
-import { Hero } from '@/components/Hero';
+import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import { Credibility } from '@/components/Credibility';
 import { ProcessTimeline } from '@/components/ProcessTimeline';
 import { SpeedCalculator } from '@/components/SpeedCalculator';
@@ -13,7 +13,7 @@ interface HomePageProps {
 const HomePage = ({ language }: HomePageProps) => {
   return (
     <div className="bg-background mesh-gradient">
-      <Hero language={language} />
+      <HeroGeometric />
       <Credibility language={language} />
       <ProcessTimeline language={language} />
       <SpeedCalculator language={language} />
