@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Circle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { Language, translations } from "@/lib/translations";
 
 function ElegantShape({
   className,
@@ -60,6 +61,7 @@ function ElegantShape({
 }
 
 interface HeroGeometricProps {
+  language?: Language;
   badge?: string;
   title1?: string;
   title2?: string;
@@ -68,12 +70,19 @@ interface HeroGeometricProps {
 }
 
 function HeroGeometric({
-  badge = "Michel Media | Modernia digiosaamista",
-  title1 = "Verkkosivut, jotka",
-  title2 = "skaalaavat liiketoimintaasi.",
-  paragraph = "Suomalaista digiosaamista\nModernit verkkosivut ja yksilöllinen palvelu.",
-  ctaLabel = "Ota yhteyttä",
+  language = "fi",
+  badge,
+  title1,
+  title2,
+  paragraph,
+  ctaLabel,
 }: HeroGeometricProps) {
+  const tHero = translations.hero;
+  const resolvedBadge = badge ?? tHero.badge[language];
+  const resolvedTitle1 = title1 ?? tHero.title1[language];
+  const resolvedTitle2 = title2 ?? tHero.title2[language];
+  const resolvedParagraph = paragraph ?? tHero.paragraph[language];
+  const resolvedCtaLabel = ctaLabel ?? tHero.cta[language];
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
