@@ -11,10 +11,13 @@ interface LayoutProps {
 
 export const Layout = ({ children, language, onLanguageChange }: LayoutProps) => {
   return (
-    <main className="min-h-screen">
-      <Navbar language={language} onLanguageChange={onLanguageChange} />
-      {children}
-      <Footer language={language} />
+    <main className="relative min-h-screen bg-background">
+      <div className="ambient-glow" aria-hidden="true" />
+      <div className="relative z-10">
+        <Navbar language={language} onLanguageChange={onLanguageChange} />
+        {children}
+        <Footer language={language} />
+      </div>
     </main>
   );
 };
