@@ -71,7 +71,7 @@ function HeroGeometric({
   badge = "Michel Media | Modernia digiosaamista",
   title1 = "Verkkosivut, jotka",
   title2 = "skaalaavat liiketoimintaasi.",
-  paragraph = "Mikkeliläistä osaamista – Modernit verkkosivut paikallisella otteella ja uusimmilla teknologioilla.",
+  paragraph = "Suomalaista digiosaamista – Modernit verkkosivut ja yksilöllinen palvelu.",
   ctaLabel = "Ota yhteyttä",
 }: HeroGeometricProps) {
   const fadeUpVariants = {
