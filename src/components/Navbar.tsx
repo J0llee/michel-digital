@@ -61,11 +61,7 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                 className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   isActive(link.href)
                     ? 'text-primary bg-primary/10'
-                    : scrolled
-                      ? 'text-foreground/70 hover:text-foreground hover:bg-foreground/5'
-                      : location.pathname === '/'
-                        ? 'text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10'
-                        : 'text-foreground/70 hover:text-foreground hover:bg-foreground/5'
+                    : 'text-slate-800 dark:text-slate-100 hover:text-primary hover:bg-foreground/5'
                 }`}
               >
                 {link.label}
@@ -75,20 +71,12 @@ export const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
             <div className="w-px h-6 bg-border mx-2" />
 
             <ThemeToggle
-              className={
-                scrolled || location.pathname !== '/'
-                  ? 'text-foreground hover:bg-foreground/5'
-                  : 'text-primary-foreground hover:bg-primary-foreground/10'
-              }
+              className="text-slate-800 dark:text-slate-100 hover:bg-foreground/5"
             />
 
             <button
               onClick={toggleLanguage}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                scrolled || location.pathname !== '/'
-                  ? 'bg-foreground/5 hover:bg-foreground/10 text-foreground'
-                  : 'bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground'
-              }`}
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-foreground/5 hover:bg-foreground/10 text-slate-800 dark:text-slate-100"
             >
               <Globe className="w-4 h-4" />
               {language === 'fi' ? 'EN' : 'FI'}
