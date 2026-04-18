@@ -71,7 +71,7 @@ function HeroGeometric({
   badge = "Michel Media | Modernia digiosaamista",
   title1 = "Verkkosivut, jotka",
   title2 = "skaalaavat liiketoimintaasi.",
-  paragraph = "Suomalaista digiosaamista – Modernit verkkosivut ja yksilöllinen palvelu.",
+  paragraph = "Suomalaista digiosaamista\nModernit verkkosivut ja yksilöllinen palvelu.",
   ctaLabel = "Ota yhteyttä",
 }: HeroGeometricProps) {
   const fadeUpVariants = {
@@ -177,7 +177,7 @@ function HeroGeometric({
             initial="hidden"
             animate="visible"
           >
-            <p className="text-base sm:text-lg md:text-xl text-slate-800 dark:text-slate-100 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-slate-800 dark:text-slate-100 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4 whitespace-pre-line">
               {paragraph}
             </p>
           </motion.div>
