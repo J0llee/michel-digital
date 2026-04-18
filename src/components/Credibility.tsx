@@ -9,7 +9,7 @@ export const Credibility = ({ language }: CredibilityProps) => {
   const t = translations.credibility;
 
   return (
-    <section className="py-24 mesh-gradient">
+    <section className="py-24 bg-transparent">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

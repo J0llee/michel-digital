@@ -17,7 +17,7 @@ export const ServicesTeaser = ({ language }: ServicesTeaserProps) => {
   const t = translations.services;
 
   return (
-    <section className="py-28 mesh-gradient">
+    <section className="py-28 bg-transparent">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
