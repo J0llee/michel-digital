@@ -9,6 +9,22 @@ export const translations = {
     contact: { fi: 'Yhteystiedot', en: 'Contact' },
   },
   hero: {
+    badge: {
+      fi: 'Michel Media | Modernia digiosaamista',
+      en: 'Michel Media | Modern Digital Expertise',
+    },
+    title1: {
+      fi: 'Verkkosivut, jotka',
+      en: 'Websites that',
+    },
+    title2: {
+      fi: 'skaalaavat liiketoimintaasi.',
+      en: 'scale your business.',
+    },
+    paragraph: {
+      fi: 'Suomalaista digiosaamista\nModernit verkkosivut ja yksilöllinen palvelu.',
+      en: 'Finnish digital expertise\nModern websites with a personal touch.',
+    },
     headline: {
       fi: 'Modernia digiosaamista – Verkkosivut, jotka skaalaavat liiketoimintaasi.',
       en: 'Modern Digital Excellence – Websites that scale your business.',

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Circle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { Language, translations } from "@/lib/translations";
 
 function ElegantShape({
   className,
@@ -60,6 +61,7 @@ function ElegantShape({
 }
 
 interface HeroGeometricProps {
+  language?: Language;
   badge?: string;
   title1?: string;
   title2?: string;
@@ -68,12 +70,19 @@ interface HeroGeometricProps {
 }
 
 function HeroGeometric({
-  badge = "Michel Media | Modernia digiosaamista",
-  title1 = "Verkkosivut, jotka",
-  title2 = "skaalaavat liiketoimintaasi.",
-  paragraph = "Suomalaista digiosaamista\nModernit verkkosivut ja yksilöllinen palvelu.",
-  ctaLabel = "Ota yhteyttä",
+  language = "fi",
+  badge,
+  title1,
+  title2,
+  paragraph,
+  ctaLabel,
 }: HeroGeometricProps) {
+  const tHero = translations.hero;
+  const resolvedBadge = badge ?? tHero.badge[language];
+  const resolvedTitle1 = title1 ?? tHero.title1[language];
+  const resolvedTitle2 = title2 ?? tHero.title2[language];
+  const resolvedParagraph = paragraph ?? tHero.paragraph[language];
+  const resolvedCtaLabel = ctaLabel ?? tHero.cta[language];
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
@@ -156,7 +165,7 @@ function HeroGeometric({
           >
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 md:mb-8 tracking-tighter leading-[1.05]">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/80">
-                {title1}
+                {resolvedTitle1}
               </span>
               <br />
               <span
@@ -165,7 +174,7 @@ function HeroGeometric({
                   "bg-gradient-to-r from-primary via-primary to-primary/70"
                 )}
               >
-                {title2}
+                {resolvedTitle2}
               </span>
             </h1>
           </motion.div>
@@ -178,7 +187,7 @@ function HeroGeometric({
             animate="visible"
           >
             <p className="text-base sm:text-lg md:text-xl text-slate-800 dark:text-slate-100 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4 whitespace-pre-line">
-              {paragraph}
+              {resolvedParagraph}
             </p>
           </motion.div>
 
@@ -205,7 +214,7 @@ function HeroGeometric({
                   "transition-colors duration-300"
                 )}
               >
-                {ctaLabel}
+                {resolvedCtaLabel}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
