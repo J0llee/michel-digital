@@ -2,6 +2,7 @@ import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
+import ellagrillImg from '@/assets/ellagrill.png';
 
 interface ReferencesPageProps {
   language: Language;
@@ -16,7 +17,19 @@ const references = [
     },
     image: gasthausImg,
     url: 'https://gasthausmikkeli.fi',
+    domain: 'gasthausmikkeli.fi',
     tags: { fi: ['Verkkosivut', 'Majoitus', 'Mikkeli'], en: ['Website', 'Accommodation', 'Mikkeli'] },
+  },
+  {
+    title: 'Ella Grill Mikkeli',
+    description: {
+      fi: 'Mikkelin keskustassa sijaitsevan suositun grilliravintolan uudet, raikkaat verkkosivut. Laaja menu ja näyttävät, meidän tuottamamme ruokakuvat tuovat maut suoraan ruudulle.',
+      en: 'Fresh new website for a popular grill restaurant in the center of Mikkeli. An extensive menu and striking food photography produced by our team bring the flavors right to the screen.',
+    },
+    image: ellagrillImg,
+    url: 'https://ellagrill.fi',
+    domain: 'ellagrill.fi',
+    tags: { fi: ['Verkkosivut', 'Ravintola', 'Mikkeli'], en: ['Website', 'Restaurant', 'Mikkeli'] },
   },
 ];
 
@@ -65,7 +78,7 @@ const ReferencesPage = ({ language }: ReferencesPageProps) => {
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
                       <div className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
                       <span className="ml-3 text-[10px] text-muted-foreground/50 font-mono truncate">
-                        gasthausmikkeli.fi
+                        {ref.domain}
                       </span>
                     </div>
                     <div className="overflow-hidden">
