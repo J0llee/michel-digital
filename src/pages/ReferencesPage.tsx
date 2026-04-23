@@ -17,7 +17,19 @@ const references = [
     },
     image: gasthausImg,
     url: 'https://gasthausmikkeli.fi',
+    domain: 'gasthausmikkeli.fi',
     tags: { fi: ['Verkkosivut', 'Majoitus', 'Mikkeli'], en: ['Website', 'Accommodation', 'Mikkeli'] },
+  },
+  {
+    title: 'Ella Grill Mikkeli',
+    description: {
+      fi: 'Mikkelin keskustassa sijaitsevan suositun grilliravintolan uudet, raikkaat verkkosivut. Laaja menu ja näyttävät, meidän tuottamamme ruokakuvat tuovat maut suoraan ruudulle.',
+      en: 'Fresh new website for a popular grill restaurant in the center of Mikkeli. An extensive menu and striking food photography produced by our team bring the flavors right to the screen.',
+    },
+    image: ellagrillImg,
+    url: 'https://ellagrill.fi',
+    domain: 'ellagrill.fi',
+    tags: { fi: ['Verkkosivut', 'Ravintola', 'Mikkeli'], en: ['Website', 'Restaurant', 'Mikkeli'] },
   },
 ];
 
