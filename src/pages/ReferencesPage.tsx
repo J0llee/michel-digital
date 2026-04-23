@@ -2,6 +2,7 @@ import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
+import ellagrillImg from '@/assets/ellagrill.png';
 
 interface ReferencesPageProps {
   language: Language;
