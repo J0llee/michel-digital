@@ -78,7 +78,7 @@ const ReferencesPage = ({ language }: ReferencesPageProps) => {
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
                       <div className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
                       <span className="ml-3 text-[10px] text-muted-foreground/50 font-mono truncate">
-                        gasthausmikkeli.fi
+                        {ref.domain}
                       </span>
                     </div>
                     <div className="overflow-hidden">
