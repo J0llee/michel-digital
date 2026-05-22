@@ -14,6 +14,10 @@ interface FAQProps {
 
 export const FAQ = ({ language }: FAQProps) => {
   const t = translations.faq;
+  const currentFaqs = t.items.map((item) => ({
+    q: item.q[language],
+    a: item.a[language],
+  }));
 
   return (
     <section className="py-28 bg-transparent">
