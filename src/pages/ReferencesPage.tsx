@@ -27,7 +27,7 @@ const references = [
       en: 'Fresh new website for a popular grill restaurant in the center of Mikkeli. An extensive menu and striking food photography produced by our team bring the flavors right to the screen.',
     },
     image: ellagrillImg,
-    url: 'https://ellagrill.fi',
+    url: 'https://ellagrill-menu.netlify.app/',
     domain: 'ellagrill.fi',
     tags: { fi: ['Verkkosivut', 'Ravintola', 'Mikkeli'], en: ['Website', 'Restaurant', 'Mikkeli'] },
   },
