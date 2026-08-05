@@ -3,12 +3,36 @@ import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
 import ellagrillImg from '@/assets/ellagrill.png';
+import ykkospalkintoImg from '@/assets/ykkospalkinto.jpg';
+import kaltimonkoskiImg from '@/assets/kaltimonkoski.jpg';
 
 interface ReferencesPageProps {
   language: Language;
 }
 
 const references = [
+  {
+    title: 'Mikkelin Ykköspalkinto',
+    description: {
+      fi: 'Palkinto- ja liikelahja-alan sekä kaiverrusten luotettava toimittaja Mikkelissä.',
+      en: 'A reliable supplier of awards, business gifts, and engraving services in Mikkeli.',
+    },
+    image: ykkospalkintoImg,
+    url: 'https://ykkospalkinto.fi',
+    domain: 'ykkospalkinto.fi',
+    tags: { fi: ['Verkkosivut', 'Design', 'Mikkeli'], en: ['Custom Website', 'Design', 'Mikkeli'] },
+  },
+  {
+    title: 'Hotelli Kaltimonkoski',
+    description: {
+      fi: 'Majoituspalvelu Enon keskustassa Pohjois-Karjalassa.',
+      en: 'Accommodation services in the center of Eno, North Karelia.',
+    },
+    image: kaltimonkoskiImg,
+    url: 'https://hotellikaltimonkoski.fi',
+    domain: 'hotellikaltimonkoski.fi',
+    tags: { fi: ['Verkkosivut', 'Majoitus', 'Eno'], en: ['Custom Website', 'Accommodation', 'Eno'] },
+  },
   {
     title: 'Gasthaus Mikkeli',
     description: {
