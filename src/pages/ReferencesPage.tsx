@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
 import ellagrillImg from '@/assets/ellagrill.png';
+import ykkospalkintoImg from '@/assets/ykkospalkinto.jpg';
+import kaltimonkoskiImg from '@/assets/kaltimonkoski.jpg';
 
 interface ReferencesPageProps {
   language: Language;
