@@ -35,6 +35,7 @@ const references = [
   },
   {
     title: 'Gasthaus Mikkeli',
+    description: {
       fi: 'Moderni ja kutsuva verkkosivusto perinteikkäälle mikkeliläiselle majoituspalvelulle. Toteutettu nopealla toimitusajalla ja optimoitu sujuvaan asiakaskokemukseen.',
       en: 'A modern and inviting website for a traditional local accommodation service. Delivered with a fast turnaround and optimized for a seamless customer experience.',
     },
