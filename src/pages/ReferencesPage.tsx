@@ -4,7 +4,7 @@ import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
 import ellagrillImg from '@/assets/ellagrill.png';
 import ykkospalkintoAsset from '@/assets/ykkospalkinto.png.asset.json';
-import kaltimonkoskiImg from '@/assets/kaltimonkoski.jpg';
+import kaltimonkoskiAsset from '@/assets/kaltimonkoski.png.asset.json';
 
 interface ReferencesPageProps {
   language: Language;
@@ -28,7 +28,7 @@ const references = [
       fi: 'Majoituspalvelu Enon keskustassa Pohjois-Karjalassa.',
       en: 'Accommodation services in the center of Eno, North Karelia.',
     },
-    image: kaltimonkoskiImg,
+    image: kaltimonkoskiAsset.url,
     url: 'https://hotellikaltimonkoski.fi',
     domain: 'hotellikaltimonkoski.fi',
     tags: { fi: ['Verkkosivut', 'Majoitus', 'Eno'], en: ['Custom Website', 'Accommodation', 'Eno'] },
