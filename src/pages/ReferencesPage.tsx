@@ -12,8 +12,6 @@ interface ReferencesPageProps {
 
 const references = [
   {
-const references = [
-  {
     title: 'Mikkelin Ykköspalkinto',
     description: {
       fi: 'Palkinto- ja liikelahja-alan sekä kaiverrusten luotettava toimittaja Mikkelissä.',
