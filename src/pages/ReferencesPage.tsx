@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
 import ellagrillImg from '@/assets/ellagrill.png';
-import ykkospalkintoAsset from '@/assets/ykkospalkinto.png.asset.json';
-import kaltimonkoskiAsset from '@/assets/kaltimonkoski.png.asset.json';
 
 interface ReferencesPageProps {
   language: Language;
@@ -17,7 +15,7 @@ const references = [
       fi: 'Palkinto- ja liikelahja-alan sekä kaiverrusten luotettava toimittaja Mikkelissä.',
       en: 'A reliable supplier of awards, business gifts, and engraving services in Mikkeli.',
     },
-    image: ykkospalkintoAsset.url,
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     url: 'https://ykkospalkinto.fi',
     domain: 'ykkospalkinto.fi',
     tags: { fi: ['Verkkosivut', 'Design', 'Mikkeli'], en: ['Custom Website', 'Design', 'Mikkeli'] },
@@ -28,7 +26,7 @@ const references = [
       fi: 'Majoituspalvelu Enon keskustassa Pohjois-Karjalassa.',
       en: 'Accommodation services in the center of Eno, North Karelia.',
     },
-    image: kaltimonkoskiAsset.url,
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
     url: 'https://hotellikaltimonkoski.fi',
     domain: 'hotellikaltimonkoski.fi',
     tags: { fi: ['Verkkosivut', 'Majoitus', 'Eno'], en: ['Custom Website', 'Accommodation', 'Eno'] },
