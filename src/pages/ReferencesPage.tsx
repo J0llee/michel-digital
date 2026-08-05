@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
 import ellagrillImg from '@/assets/ellagrill.png';
-import ykkospalkintoImg from '@/assets/ykkospalkinto.jpg';
+import ykkospalkintoAsset from '@/assets/ykkospalkinto.png.asset.json';
 import kaltimonkoskiImg from '@/assets/kaltimonkoski.jpg';
 
 interface ReferencesPageProps {
@@ -17,7 +17,7 @@ const references = [
       fi: 'Palkinto- ja liikelahja-alan sekä kaiverrusten luotettava toimittaja Mikkelissä.',
       en: 'A reliable supplier of awards, business gifts, and engraving services in Mikkeli.',
     },
-    image: ykkospalkintoImg,
+    image: ykkospalkintoAsset.url,
     url: 'https://ykkospalkinto.fi',
     domain: 'ykkospalkinto.fi',
     tags: { fi: ['Verkkosivut', 'Design', 'Mikkeli'], en: ['Custom Website', 'Design', 'Mikkeli'] },
