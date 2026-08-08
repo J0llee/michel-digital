@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
 import ellagrillImg from '@/assets/ellagrill.png';
-import ykkospalkintoAsset from '@/assets/ykkospalkinto.png.asset.json';
+import ykkospalkintoAsset from '@/assets/ykkospalkinto-2.png.asset.json';
 import kaltimonkoskiAsset from '@/assets/kaltimonkoski.png.asset.json';
 
 interface ReferencesPageProps {
