@@ -12,6 +12,17 @@ interface ReferencesPageProps {
 
 const references = [
   {
+    title: 'Lahti-huvilat',
+    description: {
+      fi: 'Laadukkaita huviloita ja loma-asuntoja. Laaja, visuaalisesti näyttävä ja helppokäyttöinen sivusto.',
+      en: 'High-quality villas and holiday homes. A large, visually stunning and user-friendly website.',
+    },
+    image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+    url: 'https://lahti-huvilat.fi/',
+    domain: 'lahti-huvilat.fi',
+    tags: { fi: ['Verkkosivut', 'Villa', 'Mökki'], en: ['Website', 'Villa', 'Cabin'] },
+  },
+  {
     title: 'Mikkelin Ykköspalkinto',
     description: {
       fi: 'Palkinto- ja liikelahja-alan sekä kaiverrusten luotettava toimittaja Mikkelissä.',
@@ -43,6 +54,17 @@ const references = [
     url: 'https://gasthausmikkeli.fi',
     domain: 'gasthausmikkeli.fi',
     tags: { fi: ['Verkkosivut', 'Majoitus', 'Mikkeli'], en: ['Website', 'Accommodation', 'Mikkeli'] },
+  },
+  {
+    title: 'Hallitilaa.fi',
+    description: {
+      fi: 'Monipuolisia halli- ja toimitiloja yksityisten ja yritysten tarpeisiin. Selkeä alusta vapaiden tilojen esittelyyn.',
+      en: 'Versatile industrial and commercial spaces for private and business needs. A clear platform for showcasing available properties.',
+    },
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+    url: 'https://hallitilaa.fi/',
+    domain: 'hallitilaa.fi',
+    tags: { fi: ['Verkkosivut', 'Toimitilat', 'Kiinteistö'], en: ['Website', 'Commercial Spaces', 'Real Estate'] },
   },
   {
     title: 'Ella Grill Mikkeli',
