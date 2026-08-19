@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Language, translations } from '@/lib/translations';
 import gasthausImg from '@/assets/gasthaus.jpg';
 import ellagrillImg from '@/assets/ellagrill.png';
-import ykkospalkintoAsset from '@/assets/ykkospalkinto-2.png.asset.json';
-import kaltimonkoskiAsset from '@/assets/kaltimonkoski-2.png.asset.json';
+import ykkospalkintoImg from '@/assets/ykkospalkinto.webp';
+import kaltimonkoskiImg from '@/assets/kaltimonkoski.webp';
 
 interface ReferencesPageProps {
   language: Language;
@@ -17,7 +17,7 @@ const references = [
       fi: 'Palkinto- ja liikelahja-alan sekä kaiverrusten luotettava toimittaja Mikkelissä.',
       en: 'A reliable supplier of awards, business gifts, and engraving services in Mikkeli.',
     },
-    image: ykkospalkintoAsset.url,
+    image: ykkospalkintoImg,
     url: 'https://ykkospalkinto.fi',
     domain: 'ykkospalkinto.fi',
     tags: { fi: ['Verkkosivut', 'Design', 'Mikkeli'], en: ['Custom Website', 'Design', 'Mikkeli'] },
@@ -28,7 +28,7 @@ const references = [
       fi: 'Majoituspalvelu Enon keskustassa Pohjois-Karjalassa.',
       en: 'Accommodation services in the center of Eno, North Karelia.',
     },
-    image: kaltimonkoskiAsset.url,
+    image: kaltimonkoskiImg,
     url: 'https://hotellikaltimonkoski.fi',
     domain: 'hotellikaltimonkoski.fi',
     tags: { fi: ['Verkkosivut', 'Majoitus', 'Eno'], en: ['Custom Website', 'Accommodation', 'Eno'] },
