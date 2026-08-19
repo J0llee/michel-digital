@@ -6,6 +6,7 @@ import ellagrillImg from '@/assets/ellagrill.png';
 import ykkospalkintoImg from '@/assets/ykkospalkinto.webp';
 import kaltimonkoskiImg from '@/assets/kaltimonkoski.webp';
 import hallitilaaImg from '@/assets/hallitilaa.png';
+import lahtihuvilatImg from '@/assets/lahti-huvilat.png';
 
 interface ReferencesPageProps {
   language: Language;
@@ -18,7 +19,7 @@ const references = [
       fi: 'Laadukkaita huviloita ja loma-asuntoja. Laaja, visuaalisesti näyttävä ja helppokäyttöinen sivusto.',
       en: 'High-quality villas and holiday homes. A large, visually stunning and user-friendly website.',
     },
-    image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+    image: lahtihuvilatImg,
     url: 'https://lahti-huvilat.fi/',
     domain: 'lahti-huvilat.fi',
     tags: { fi: ['Verkkosivut', 'Villa', 'Mökki'], en: ['Website', 'Villa', 'Cabin'] },
