@@ -5,6 +5,7 @@ import gasthausImg from '@/assets/gasthaus.jpg';
 import ellagrillImg from '@/assets/ellagrill.png';
 import ykkospalkintoImg from '@/assets/ykkospalkinto.webp';
 import kaltimonkoskiImg from '@/assets/kaltimonkoski.webp';
+import hallitilaaImg from '@/assets/hallitilaa.png';
 
 interface ReferencesPageProps {
   language: Language;
@@ -61,7 +62,7 @@ const references = [
       fi: 'Monipuolisia halli- ja toimitiloja yksityisten ja yritysten tarpeisiin. Selkeä alusta vapaiden tilojen esittelyyn.',
       en: 'Versatile industrial and commercial spaces for private and business needs. A clear platform for showcasing available properties.',
     },
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+    image: hallitilaaImg,
     url: 'https://hallitilaa.fi/',
     domain: 'hallitilaa.fi',
     tags: { fi: ['Verkkosivut', 'Toimitilat', 'Kiinteistö'], en: ['Website', 'Commercial Spaces', 'Real Estate'] },
